@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/PDT.AI/static/css/main.f43e9ab5.css",
-    "main.js": "/PDT.AI/static/js/main.9a8e75c8.js",
+    "main.js": "/PDT.AI/static/js/main.c5323a33.js",
     "static/js/453.184ed148.chunk.js": "/PDT.AI/static/js/453.184ed148.chunk.js",
     "index.html": "/PDT.AI/index.html",
     "main.f43e9ab5.css.map": "/PDT.AI/static/css/main.f43e9ab5.css.map",
-    "main.9a8e75c8.js.map": "/PDT.AI/static/js/main.9a8e75c8.js.map",
+    "main.c5323a33.js.map": "/PDT.AI/static/js/main.c5323a33.js.map",
     "453.184ed148.chunk.js.map": "/PDT.AI/static/js/453.184ed148.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f43e9ab5.css",
-    "static/js/main.9a8e75c8.js"
+    "static/js/main.c5323a33.js"
   ]
 }
