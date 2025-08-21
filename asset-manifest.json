@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pdt.ai/static/css/main.f43e9ab5.css",
-    "main.js": "/pdt.ai/static/js/main.3fbb5742.js",
-    "static/js/453.184ed148.chunk.js": "/pdt.ai/static/js/453.184ed148.chunk.js",
-    "index.html": "/pdt.ai/index.html",
-    "main.f43e9ab5.css.map": "/pdt.ai/static/css/main.f43e9ab5.css.map",
-    "main.3fbb5742.js.map": "/pdt.ai/static/js/main.3fbb5742.js.map",
-    "453.184ed148.chunk.js.map": "/pdt.ai/static/js/453.184ed148.chunk.js.map"
+    "main.css": "/PDT.AI/static/css/main.f43e9ab5.css",
+    "main.js": "/PDT.AI/static/js/main.1ea1a0bf.js",
+    "static/js/453.184ed148.chunk.js": "/PDT.AI/static/js/453.184ed148.chunk.js",
+    "index.html": "/PDT.AI/index.html",
+    "main.f43e9ab5.css.map": "/PDT.AI/static/css/main.f43e9ab5.css.map",
+    "main.1ea1a0bf.js.map": "/PDT.AI/static/js/main.1ea1a0bf.js.map",
+    "453.184ed148.chunk.js.map": "/PDT.AI/static/js/453.184ed148.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f43e9ab5.css",
-    "static/js/main.3fbb5742.js"
+    "static/js/main.1ea1a0bf.js"
   ]
 }
