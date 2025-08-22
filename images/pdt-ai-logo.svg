@@ -1,0 +1,16 @@
+<svg width="400" height="100" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- PDT text in dark blue -->
+  <text x="10" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="#455a64">PDT</text>
+  
+  <!-- Dot separator -->
+  <circle cx="240" cy="55" r="8" fill="#455a64"/>
+  
+  <!-- AI text in red/orange gradient -->
+  <defs>
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff5722;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f44336;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <text x="270" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="url(#aiGradient)">AI</text>
+</svg>
