@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>PDT.AI - Redirecting...</title>
+    <title>PDT.AI - Page Not Found</title>
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
       // MIT License
@@ -24,20 +24,33 @@
       var pathSegmentsToKeep = 1;
 
       var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+      
+      // Only redirect if this is NOT the homepage
+      // Check if we're at the root path or just the repo name
+      var pathParts = l.pathname.split('/').filter(Boolean);
+      var isHomepage = pathParts.length <= 1 || (pathParts.length === 1 && pathParts[0] === 'PDT.AI');
+      
+      if (!isHomepage) {
+        // Only redirect for actual sub-routes, not the homepage
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+          l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+        );
+      } else {
+        // For homepage, redirect to the main index
+        window.location.href = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/PDT.AI/';
+      }
 
     </script>
   </head>
   <body>
     <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
-      <h1>Redirecting to PDT.AI...</h1>
-      <p>If you are not redirected automatically, <a href="https://AZRASEL.github.io/PDT.AI/">click here</a>.</p>
+      <h1>PDT.AI - Page Not Found</h1>
+      <p>The page you're looking for doesn't exist.</p>
+      <p><a href="https://AZRASEL.github.io/PDT.AI/">Return to PDT.AI Homepage</a></p>
     </div>
   </body>
 </html>
