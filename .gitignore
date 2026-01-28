@@ -1,0 +1,11 @@
+# WordPress Defaults
+.DS_Store
+Thumbs.db
+node_modules/
+dist/
+*.log
+.vscode/
+.idea/
+
+# Theme specific
+*.zip
