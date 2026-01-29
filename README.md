@@ -6,7 +6,7 @@ A specialized WordPress theme for Photodynamic Therapy (PDT) clinics focusing on
 
 ### ☁️ Run in Browser (WordPress Playground)
 You can test this theme instantly in your browser without any installation:
-[Launch in WordPress Playground](https://playground.wordpress.net/?theme=https://github.com/YOUR_USERNAME/YOUR_REPO&blueprint-url=https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/blueprint.json)
+[Launch in WordPress Playground](https://playground.wordpress.net/?theme=https://github.com/AZRASEL/PDT.AI&blueprint-url=https://raw.githubusercontent.com/AZRASEL/PDT.AI/main/blueprint.json)
 
 *(Note: Replace `YOUR_USERNAME/YOUR_REPO` with your actual GitHub repository path after pushing)*
 
