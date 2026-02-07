@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How PDT Works | Photodynamic Therapy Process</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="language-toggle">
+        <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
+        <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h1>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
+                <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
+                <li><a href="how-it-works.html" data-en="How It Works" data-bn="কীভাবে কাজ করে">How It Works</a></li>
+                <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
+                <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
+                <li><a href="faq.html" data-en="FAQ" data-bn="প্রশ্নোত্তর">FAQ</a></li>
+                <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="hero" style="padding: 80px 20px;">
+        <div class="container hero-content">
+            <h1 class="hero-title" data-en="How PDT Works" data-bn="পিডিটি কীভাবে কাজ করে">How PDT Works</h1>
+            <p class="hero-subtitle" data-en="Understanding the treatment process" data-bn="চিকিৎসা প্রক্রিয়া বোঝা">Understanding the treatment process</p>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title" data-en="The PDT Treatment Process" data-bn="পিডিটি চিকিৎসা প্রক্রিয়া">The PDT Treatment Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 data-en="Photosensitizer Administration" data-bn="ফটোসেন্সিটাইজার প্রশাসন">Photosensitizer Administration</h3>
+                    <p data-en="A light-sensitive drug (photosensitizer) is administered topically or orally. Common agents include 5-ALA or methylene blue."
+                       data-bn="একটি আলো-সংবেদনশীল ওষুধ (ফটোসেন্সিটাইজার) টপিক্যালি বা মৌখিকভাবে প্রয়োগ করা হয়। সাধারণ এজেন্টগুলির মধ্যে 5-ALA বা মিথিলিন নীল অন্তর্ভুক্ত।">
+                        A light-sensitive drug is administered topically or orally. Common agents include 5-ALA or methylene blue.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 data-en="Accumulation Phase" data-bn="সংগ্রহ পর্যায়">Accumulation Phase</h3>
+                    <p data-en="The photosensitizer accumulates preferentially in cancer cells over 2-4 hours, creating differential concentrations."
+                       data-bn="ফটোসেন্সিটাইজার 2-4 ঘন্টার মধ্যে ক্যান্সার কোষে অগ্রাধিকার সংগ্রহ করে, ডিফারেনশিয়াল ঘনত্ব তৈরি করে।">
+                        The photosensitizer accumulates in cancer cells over 2-4 hours.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 data-en="Light Activation" data-bn="আলো সক্রিয়করণ">Light Activation</h3>
+                    <p data-en="Specific wavelength light (typically 635nm LED) is delivered to the treatment area using fiber optic devices."
+                       data-bn="নির্দিষ্ট তরঙ্গদৈর্ঘ্যের আলো (সাধারণত 635nm LED) ফাইবার অপটিক ডিভাইস ব্যবহার করে চিকিৎসা এলাকায় সরবরাহ করা হয়।">
+                        Specific wavelength light (635nm LED) is delivered using fiber optic devices.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3 data-en="Photochemical Reaction" data-bn="ফটোকেমিক্যাল প্রতিক্রিয়া">Photochemical Reaction</h3>
+                    <p data-en="Light activates the photosensitizer, producing reactive oxygen species (ROS) that destroy cancer cells."
+                       data-bn="আলো ফটোসেন্সিটাইজারকে সক্রিয় করে, প্রতিক্রিয়াশীল অক্সিজেন প্রজাতি (ROS) উত্পাদন করে যা ক্যান্সার কোষ ধ্বংস করে।">
+                        Light activates the photosensitizer, producing reactive oxygen species that destroy cancer cells.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3 data-en="Cell Death & Recovery" data-bn="কোষ মৃত্যু এবং পুনরুদ্ধার">Cell Death & Recovery</h3>
+                    <p data-en="Cancer cells undergo apoptosis. Healthy tissue heals within 7-17 days with minimal scarring."
+                       data-bn="ক্যান্সার কোষ অ্যাপোপটোসিস সহ্য করে। স্বাস্থ্যকর টিস্যু ন্যূনতম দাগ সহ 7-17 দিনের মধ্যে সুস্থ হয়।">
+                        Cancer cells die. Healthy tissue heals within 7-17 days.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Three Essential Elements" data-bn="তিনটি প্রয়োজনীয় উপাদান">Three Essential Elements</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">💊</div>
+                    <h3 data-en="1. Photosensitizer" data-bn="১. ফটোসেন্সিটাইজার">1. Photosensitizer</h3>
+                    <p data-en="Light-sensitive drugs that accumulate in cancer cells. Second-generation agents like 5-ALA are chemically pure, more efficient, and have optimized absorption wavelengths."
+                       data-bn="আলো-সংবেদনশীল ওষুধ যা ক্যান্সার কোষে জমা হয়। 5-ALA এর মতো দ্বিতীয় প্রজন্মের এজেন্টগুলি রাসায়নিকভাবে বিশুদ্ধ, আরও দক্ষ এবং অপ্টিমাইজড শোষণ তরঙ্গদৈর্ঘ্য রয়েছে।">
+                        Light-sensitive drugs that accumulate in cancer cells. 5-ALA is chemically pure and efficient.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💡</div>
+                    <h3 data-en="2. Light Source" data-bn="২. আলোর উৎস">2. Light Source</h3>
+                    <p data-en="Specific wavelength light (usually 635nm red light from LED sources) that matches the photosensitizer's absorption spectrum for maximum activation."
+                       data-bn="নির্দিষ্ট তরঙ্গদৈর্ঘ্যের আলো (সাধারণত LED উৎস থেকে 635nm লাল আলো) যা সর্বাধিক সক্রিয়করণের জন্য ফটোসেন্সিটাইজারের শোষণ স্পেকট্রামের সাথে মেলে।">
+                        635nm red LED light that matches the photosensitizer's absorption spectrum.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🫁</div>
+                    <h3 data-en="3. Oxygen" data-bn="৩. অক্সিজেন">3. Oxygen</h3>
+                    <p data-en="Tissue oxygen reacts with activated photosensitizer to produce cytotoxic reactive oxygen species (ROS) that cause direct tumor cell death and damage to tumor microvasculature."
+                       data-bn="টিস্যু অক্সিজেন সক্রিয় ফটোসেন্সিটাইজারের সাথে প্রতিক্রিয়া করে সাইটোটক্সিক প্রতিক্রিয়াশীল অক্সিজেন প্রজাতি (ROS) উত্পাদন করে যা সরাসরি টিউমার কোষ মৃত্যু এবং টিউমার মাইক্রোভাস্কুলচারের ক্ষতি ঘটায়।">
+                        Tissue oxygen produces reactive oxygen species (ROS) that kill tumor cells.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h3>
+                    <p data-en="Advanced photodynamic therapy for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি">Advanced photodynamic therapy</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
+                        <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact Info" data-bn="যোগাযোগের তথ্য">Contact Info</h4>
+                    <p>Email: info@pdtcancercenter.com</p>
+                    <p>Phone: +880-XXX-XXXXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-en="© 2026 PDT Cancer Center. All rights reserved." data-bn="© ২০২৬ পিডিটি ক্যান্সার সেন্টার। সর্বস্বত্ব সংরক্ষিত।">© 2026 PDT Cancer Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

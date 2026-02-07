@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDT Oral Cancer Center | Photodynamic Therapy Excellence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
+        <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h1>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
+                <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
+                <li><a href="how-it-works.html" data-en="How It Works" data-bn="কীভাবে কাজ করে">How It Works</a></li>
+                <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
+                <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
+                <li><a href="faq.html" data-en="FAQ" data-bn="প্রশ্নোত্তর">FAQ</a></li>
+                <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title" data-en="Advanced Photodynamic Therapy for Oral Cancer" 
+                data-bn="মৌখিক ক্যান্সারের জন্য উন্নত ফটোডাইনামিক থেরাপি">
+                Advanced Photodynamic Therapy for Oral Cancer
+            </h1>
+            <p class="hero-subtitle" data-en="Non-invasive, targeted treatment preserving quality of life" 
+               data-bn="অ-আক্রমণাত্মক, লক্ষ্যবদ্ধ চিকিৎসা যা জীবনমান সংরক্ষণ করে">
+                Non-invasive, targeted treatment preserving quality of life
+            </p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-primary" data-en="Schedule Consultation" data-bn="পরামর্শ নির্ধারণ করুন">Schedule Consultation</a>
+                <a href="about.html" class="btn btn-secondary" data-en="Learn More" data-bn="আরও জানুন">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is PDT Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title" data-en="What is Photodynamic Therapy?" data-bn="ফটোডাইনামিক থেরাপি কী?">What is Photodynamic Therapy?</h2>
+            <div class="content-grid">
+                <div class="content-text">
+                    <p data-en="Photodynamic Therapy (PDT) is a cutting-edge, minimally invasive treatment that uses light-activated drugs called photosensitizers to selectively destroy cancer cells while preserving healthy tissue. This innovative approach offers hope to patients with early-stage oral cancer and precancerous lesions." 
+                       data-bn="ফটোডাইনামিক থেরাপি (পিডিটি) একটি অত্যাধুনিক, ন্যূনতম আক্রমণাত্মক চিকিৎসা যা ফটোসেন্সিটাইজার নামক আলো-সক্রিয় ওষুধ ব্যবহার করে ক্যান্সার কোষগুলিকে নির্বাচিতভাবে ধ্বংস করে এবং স্বাস্থ্যকর টিস্যু সংরক্ষণ করে। এই উদ্ভাবনী পদ্ধতি প্রাথমিক পর্যায়ের মৌখিক ক্যান্সার এবং প্রাক-ক্যান্সারজনিত ক্ষতযুক্ত রোগীদের আশা প্রদান করে।">
+                        Photodynamic Therapy (PDT) is a cutting-edge, minimally invasive treatment that uses light-activated drugs called photosensitizers to selectively destroy cancer cells while preserving healthy tissue. This innovative approach offers hope to patients with early-stage oral cancer and precancerous lesions.
+                    </p>
+                    <ul class="feature-list">
+                        <li data-en="✓ Targeted cancer cell destruction" data-bn="✓ লক্ষ্যবদ্ধ ক্যান্সার কোষ ধ্বংস">✓ Targeted cancer cell destruction</li>
+                        <li data-en="✓ Minimal damage to healthy tissue" data-bn="✓ স্বাস্থ্যকর টিস্যুতে ন্যূনতম ক্ষতি">✓ Minimal damage to healthy tissue</li>
+                        <li data-en="✓ Preserves speech and swallowing function" data-bn="✓ কথা বলা এবং গিলতে পারার ক্ষমতা সংরক্ষণ করে">✓ Preserves speech and swallowing function</li>
+                        <li data-en="✓ Shorter recovery time" data-bn="✓ সংক্ষিপ্ত পুনরুদ্ধার সময়">✓ Shorter recovery time</li>
+                        <li data-en="✓ Can be repeated if needed" data-bn="✓ প্রয়োজনে পুনরাবৃত্তি করা যায়">✓ Can be repeated if needed</li>
+                    </ul>
+                </div>
+                <div class="content-image">
+                    <div class="placeholder-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <p data-en="PDT Treatment Visualization" data-bn="পিডিটি চিকিৎসা ভিজ্যুয়ালাইজেশন">PDT Treatment Visualization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose PDT Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Why Choose PDT for Oral Cancer?" data-bn="মৌখিক ক্যান্সারের জন্য পিডিটি কেন বেছে নেবেন?">Why Choose PDT for Oral Cancer?</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3 data-en="Selective Treatment" data-bn="নির্বাচনী চিকিৎসা">Selective Treatment</h3>
+                    <p data-en="PDT specifically targets cancer cells while sparing surrounding healthy tissue, reducing side effects and complications." 
+                       data-bn="পিডিটি বিশেষভাবে ক্যান্সার কোষগুলিকে লক্ষ্য করে যখন আশেপাশের স্বাস্থ্যকর টিস্যু রক্ষা করে, পার্শ্ব প্রতিক্রিয়া এবং জটিলতা হ্রাস করে।">
+                        PDT specifically targets cancer cells while sparing surrounding healthy tissue, reducing side effects and complications.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💪</div>
+                    <h3 data-en="Preserves Function" data-bn="কার্যকারিতা সংরক্ষণ করে">Preserves Function</h3>
+                    <p data-en="Unlike surgery or radiation, PDT maintains critical oral functions like speech, swallowing, and taste, preserving quality of life." 
+                       data-bn="সার্জারি বা রেডিয়েশনের বিপরীতে, পিডিটি কথা বলা, গিলতে পারা এবং স্বাদের মতো গুরুত্বপূর্ণ মৌখিক কার্যক্রম বজায় রাখে, জীবনমান সংরক্ষণ করে।">
+                        Unlike surgery or radiation, PDT maintains critical oral functions like speech, swallowing, and taste, preserving quality of life.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3 data-en="Quick Recovery" data-bn="দ্রুত পুনরুদ্ধার">Quick Recovery</h3>
+                    <p data-en="Outpatient procedure with minimal downtime. Most patients return to normal activities within days, not weeks or months." 
+                       data-bn="বহিরাগত পদ্ধতি যার ন্যূনতম ডাউনটাইম রয়েছে। বেশিরভাগ রোগী সপ্তাহ বা মাসের পরিবর্তে দিনের মধ্যে স্বাভাবিক কার্যক্রমে ফিরে আসেন।">
+                        Outpatient procedure with minimal downtime. Most patients return to normal activities within days, not weeks or months.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h3 data-en="Repeatable" data-bn="পুনরাবৃত্তিযোগ্য">Repeatable</h3>
+                    <p data-en="PDT can be safely repeated if necessary without cumulative toxic effects, providing flexible treatment options." 
+                       data-bn="পিডিটি প্রয়োজনে নিরাপদে পুনরাবৃত্তি করা যেতে পারে কোনো ক্রমবর্ধমান বিষাক্ত প্রভাব ছাড়াই, নমনীয় চিকিৎসা বিকল্প প্রদান করে।">
+                        PDT can be safely repeated if necessary without cumulative toxic effects, providing flexible treatment options.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Evidence Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title" data-en="Proven Clinical Success" data-bn="প্রমাণিত ক্লিনিকাল সাফল্য">Proven Clinical Success</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">76.9%</div>
+                    <p data-en="Complete Response Rate" data-bn="সম্পূর্ণ প্রতিক্রিয়া হার">Complete Response Rate</p>
+                    <small data-en="In patients with advanced oral cancer" data-bn="উন্নত মৌখিক ক্যান্সারে আক্রান্ত রোগীদের মধ্যে">In patients with advanced oral cancer</small>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">52-68%</div>
+                    <p data-en="Complete Remission" data-bn="সম্পূর্ণ ক্ষমা">Complete Remission</p>
+                    <small data-en="For oral precancerous lesions" data-bn="মৌখিক প্রাক-ক্যান্সারজনিত ক্ষতের জন্য">For oral precancerous lesions</small>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">82%</div>
+                    <p data-en="Partial Response" data-bn="আংশিক প্রতিক্রিয়া">Partial Response</p>
+                    <small data-en="Overall treatment effectiveness" data-bn="সামগ্রিক চিকিৎসা কার্যকারিতা">Overall treatment effectiveness</small>
+                </div>
+            </div>
+            <p class="text-center" style="margin-top: 2rem;" data-en="Clinical studies demonstrate PDT's effectiveness in treating early-stage oral cancers and preventing progression of precancerous lesions." 
+               data-bn="ক্লিনিকাল গবেষণা প্রাথমিক পর্যায়ের মৌখিক ক্যান্সারের চিকিৎসায় এবং প্রাক-ক্যান্সারজনিত ক্ষতের অগ্রগতি প্রতিরোধে পিডিটির কার্যকারিতা প্রদর্শন করে।">
+                Clinical studies demonstrate PDT's effectiveness in treating early-stage oral cancers and preventing progression of precancerous lesions.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-en="Ready to Explore PDT Treatment?" data-bn="পিডিটি চিকিৎসা অন্বেষণ করতে প্রস্তুত?">Ready to Explore PDT Treatment?</h2>
+            <p data-en="Schedule a consultation to learn if PDT is right for you" data-bn="পিডিটি আপনার জন্য সঠিক কিনা তা জানতে পরামর্শ নির্ধারণ করুন">Schedule a consultation to learn if PDT is right for you</p>
+            <a href="contact.html" class="btn btn-primary" data-en="Contact Us Today" data-bn="আজই যোগাযোগ করুন">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h3>
+                    <p data-en="Advanced photodynamic therapy for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি">Advanced photodynamic therapy for oral cancer treatment</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
+                        <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
+                        <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact Info" data-bn="যোগাযোগের তথ্য">Contact Info</h4>
+                    <p>Email: info@pdtcancercenter.com</p>
+                    <p>Phone: +880-XXX-XXXXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-en="© 2026 PDT Cancer Center. All rights reserved." data-bn="© ২০২৬ পিডিটি ক্যান্সার সেন্টার। সর্বস্বত্ব সংরক্ষিত।">© 2026 PDT Cancer Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

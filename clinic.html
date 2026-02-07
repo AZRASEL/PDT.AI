@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Clinic | PDT Treatment Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="language-toggle">
+        <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
+        <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h1>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
+                <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
+                <li><a href="how-it-works.html" data-en="How It Works" data-bn="কীভাবে কাজ করে">How It Works</a></li>
+                <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
+                <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
+                <li><a href="faq.html" data-en="FAQ" data-bn="প্রশ্নোত্তর">FAQ</a></li>
+                <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="hero" style="padding: 80px 20px;">
+        <div class="container hero-content">
+            <h1 class="hero-title" data-en="Our PDT Treatment Center" data-bn="আমাদের পিডিটি ট্রিটমেন্ট সেন্টার">Our PDT Treatment Center</h1>
+            <p class="hero-subtitle" data-en="State-of-the-art facility for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য অত্যাধুনিক সুবিধা">State-of-the-art facility</p>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Commitment to Excellence" data-bn="উৎকর্ষতার প্রতি আমাদের প্রতিশ্রুতি">Our Commitment to Excellence</h2>
+            <div class="content-grid">
+                <div class="content-text">
+                    <p data-en="Our clinic is dedicated to providing cutting-edge photodynamic therapy for oral cancer patients. We combine the latest technology with compassionate care to deliver the best possible outcomes."
+                       data-bn="আমাদের ক্লিনিক মৌখিক ক্যান্সার রোগীদের জন্য অত্যাধুনিক ফটোডাইনামিক থেরাপি প্রদানে নিবেদিত। আমরা সর্বোত্তম সম্ভাব্য ফলাফল প্রদানের জন্য সর্বশেষ প্রযুক্তিকে সহানুভূতিশীল যত্নের সাথে একত্রিত করি।">
+                        Our clinic is dedicated to providing cutting-edge photodynamic therapy for oral cancer patients.
+                    </p>
+                    <p data-en="We follow international protocols and evidence-based practices, using state-of-the-art equipment including LED light sources and smartphone-based fluorescence imaging for precise treatment guidance."
+                       data-bn="আমরা আন্তর্জাতিক প্রোটোকল এবং প্রমাণ-ভিত্তিক অনুশীলন অনুসরণ করি, সুনির্দিষ্ট চিকিৎসা নির্দেশনার জন্য LED লাইট সোর্স এবং স্মার্টফোন-ভিত্তিক ফ্লুরোসেন্স ইমেজিং সহ অত্যাধুনিক সরঞ্জাম ব্যবহার করি।">
+                        We follow international protocols using state-of-the-art equipment.
+                    </p>
+                </div>
+                <div class="content-image">
+                    <div class="placeholder-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <p data-en="Modern PDT Treatment Room" data-bn="আধুনিক পিডিটি ট্রিটমেন্ট রুম">Modern PDT Treatment Room</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Services" data-bn="আমাদের সেবা">Our Services</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🔬</div>
+                    <h3 data-en="Comprehensive Diagnosis" data-bn="বিস্তৃত রোগ নির্ণয়">Comprehensive Diagnosis</h3>
+                    <p data-en="Advanced imaging and biopsy services for accurate cancer detection and staging"
+                       data-bn="সঠিক ক্যান্সার সনাক্তকরণ এবং স্টেজিংয়ের জন্য উন্নত ইমেজিং এবং বায়োপসি সেবা">
+                        Advanced imaging and biopsy services for accurate cancer detection and staging
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💡</div>
+                    <h3 data-en="PDT Treatment" data-bn="পিডিটি চিকিৎসা">PDT Treatment</h3>
+                    <p data-en="Fluorescence-guided photodynamic therapy using 5-ALA and 635nm LED light"
+                       data-bn="5-ALA এবং 635nm LED লাইট ব্যবহার করে ফ্লুরোসেন্স-গাইডেড ফটোডাইনামিক থেরাপি">
+                        Fluorescence-guided photodynamic therapy using 5-ALA and 635nm LED light
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👨‍⚕️</div>
+                    <h3 data-en="Follow-up Care" data-bn="ফলো-আপ কেয়ার">Follow-up Care</h3>
+                    <p data-en="Regular monitoring with ultrasound and clinical examination to ensure treatment success"
+                       data-bn="চিকিৎসার সাফল্য নিশ্চিত করতে আল্ট্রাসাউন্ড এবং ক্লিনিকাল পরীক্ষার সাথে নিয়মিত পর্যবেক্ষণ">
+                        Regular monitoring with ultrasound and clinical examination
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💬</div>
+                    <h3 data-en="Patient Support" data-bn="রোগী সহায়তা">Patient Support</h3>
+                    <p data-en="Counseling and education to help patients understand their treatment and recovery"
+                       data-bn="রোগীদের তাদের চিকিৎসা এবং পুনরুদ্ধার বুঝতে সাহায্য করার জন্য পরামর্শ এবং শিক্ষা">
+                        Counseling and education to help patients understand their treatment
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Technology" data-bn="আমাদের প্রযুক্তি">Our Technology</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3 data-en="LED Light Sources" data-bn="LED লাইট সোর্স">LED Light Sources</h3>
+                    <p data-en="Portable, battery-powered fiber-coupled 635nm LED systems with precise light delivery attachments for intraoral use"
+                       data-bn="ইন্ট্রাওরাল ব্যবহারের জন্য সুনির্দিষ্ট লাইট ডেলিভারি সংযুক্তি সহ পোর্টেবল, ব্যাটারি চালিত ফাইবার-কাপল্ড 635nm LED সিস্টেম">
+                        Portable 635nm LED systems with precise light delivery for intraoral use
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 data-en="Fluorescence Imaging" data-bn="ফ্লুরোসেন্স ইমেজিং">Fluorescence Imaging</h3>
+                    <p data-en="Smartphone-based fluorescence imaging with 405nm blue light excitation for real-time treatment monitoring"
+                       data-bn="রিয়েল-টাইম চিকিৎসা পর্যবেক্ষণের জন্য 405nm নীল আলো উত্তেজনা সহ স্মার্টফোন-ভিত্তিক ফ্লুরোসেন্স ইমেজিং">
+                        Smartphone-based imaging with 405nm excitation for real-time monitoring
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 data-en="Ultrasound Guidance" data-bn="আল্ট্রাসাউন্ড গাইডেন্স">Ultrasound Guidance</h3>
+                    <p data-en="External ultrasound for defining tumor margins and assessing treatment response"
+                       data-bn="টিউমার মার্জিন নির্ধারণ এবং চিকিৎসা প্রতিক্রিয়া মূল্যায়নের জন্য বাহ্যিক আল্ট্রাসাউন্ড">
+                        External ultrasound for defining tumor margins and assessing response
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h3>
+                    <p data-en="Advanced photodynamic therapy for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি">Advanced photodynamic therapy</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
+                        <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact Info" data-bn="যোগাযোগের তথ্য">Contact Info</h4>
+                    <p>Email: info@pdtcancercenter.com</p>
+                    <p>Phone: +880-XXX-XXXXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-en="© 2026 PDT Cancer Center. All rights reserved." data-bn="© ২০২৬ পিডিটি ক্যান্সার সেন্টার। সর্বস্বত্ব সংরক্ষিত।">© 2026 PDT Cancer Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

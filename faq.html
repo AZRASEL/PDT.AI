@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Common Questions About PDT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="language-toggle">
+        <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
+        <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h1>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
+                <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
+                <li><a href="how-it-works.html" data-en="How It Works" data-bn="কীভাবে কাজ করে">How It Works</a></li>
+                <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
+                <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
+                <li><a href="faq.html" data-en="FAQ" data-bn="প্রশ্নোত্তর">FAQ</a></li>
+                <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="hero" style="padding: 80px 20px;">
+        <div class="container hero-content">
+            <h1 class="hero-title" data-en="Frequently Asked Questions" data-bn="প্রায়শই জিজ্ঞাসিত প্রশ্ন">Frequently Asked Questions</h1>
+            <p class="hero-subtitle" data-en="Get answers to common questions about PDT" data-bn="পিডিটি সম্পর্কে সাধারণ প্রশ্নের উত্তর পান">Get answers about PDT</p>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-en="Is PDT painful?" data-bn="পিডিটি কি বেদনাদায়ক?">Is PDT painful?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p data-en="PDT is generally well-tolerated with minimal discomfort. During light application, some patients may experience a mild burning or warming sensation, but this is usually manageable. The procedure is performed as an outpatient treatment, and most patients do not require general anesthesia."
+                           data-bn="পিডিটি সাধারণত ন্যূনতম অস্বস্তি সহ ভালভাবে সহ্য করা হয়। লাইট অ্যাপ্লিকেশন চলাকালীন, কিছু রোগী হালকা জ্বলন বা উষ্ণতার অনুভূতি অনুভব করতে পারেন, তবে এটি সাধারণত পরিচালনাযোগ্য। পদ্ধতিটি বহিরাগত চিকিৎসা হিসাবে সঞ্চালিত হয় এবং বেশিরভাগ রোগীর সাধারণ অ্যানেস্থেশিয়ার প্রয়োজন হয় না।">
+                            PDT is generally well-tolerated with minimal discomfort. Most patients experience only mild sensation during treatment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-en="How long does PDT treatment take?" data-bn="পিডিটি চিকিৎসায় কতক্ষণ সময় লাগে?">How long does PDT treatment take?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p data-en="The complete PDT process typically takes about 4-6 hours. This includes photosensitizer administration, a 2-4 hour waiting period for drug accumulation, and 15-30 minutes of light delivery depending on the treatment area size. It's an outpatient procedure, so you can go home the same day."
+                           data-bn="সম্পূর্ণ পিডিটি প্রক্রিয়াটি সাধারণত প্রায় 4-6 ঘন্টা সময় নেয়। এর মধ্যে ফটোসেন্সিটাইজার প্রশাসন, ওষুধ সংগ্রহের জন্য 2-4 ঘন্টার অপেক্ষার সময় এবং চিকিৎসা এলাকার আকারের উপর নির্ভর করে 15-30 মিনিটের লাইট ডেলিভারি অন্তর্ভুক্ত। এটি একটি বহিরাগত পদ্ধতি, তাই আপনি একই দিনে বাড়িতে যেতে পারেন।">
+                            Complete PDT takes 4-6 hours including drug accumulation time. Light delivery is 15-30 minutes. It's an outpatient procedure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-en="What are the side effects of PDT?" data-bn="পিডিটির পার্শ্ব প্রতিক্রিয়া কি?">What are the side effects of PDT?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p data-en="Common side effects are mild and temporary: light sensitivity (avoid direct sunlight for 1-2 days), mild swelling, redness at the treatment site, and temporary discomfort when eating. These typically resolve within 1-2 weeks. PDT has significantly fewer side effects compared to surgery, radiation, or chemotherapy."
+                           data-bn="সাধারণ পার্শ্ব প্রতিক্রিয়াগুলি হালকা এবং অস্থায়ী: আলো সংবেদনশীলতা (1-2 দিনের জন্য সরাসরি সূর্যালোক এড়িয়ে চলুন), হালকা ফোলা, চিকিৎসা সাইটে লালভাব এবং খাওয়ার সময় অস্থায়ী অস্বস্তি। এগুলি সাধারণত 1-2 সপ্তাহের মধ্যে সমাধান হয়। সার্জারি, রেডিয়েশন বা কেমোথেরাপির তুলনায় পিডিটির উল্লেখযোগ্যভাবে কম পার্শ্ব প্রতিক্রিয়া রয়েছে।">
+                            Mild temporary effects: light sensitivity (1-2 days), mild swelling, temporary eating discomfort. Much fewer effects than surgery or chemotherapy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-en="How effective is PDT for oral cancer?" data-bn="মৌখিক ক্যান্সারের জন্য পিডিটি কতটা কার্যকর?">How effective is PDT for oral cancer?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p data-en="PDT is highly effective for early-stage oral cancers and precancerous lesions. Clinical studies show complete response rates of 52-76% depending on the stage and type of lesion. For precancerous lesions, 82% show partial or complete response. PDT is particularly effective when tumors are detected early and are small in size."
+                           data-bn="প্রাথমিক পর্যায়ের মৌখিক ক্যান্সার এবং প্রাক-ক্যান্সারজনিত ক্ষতের জন্য পিডিটি অত্যন্ত কার্যকর। ক্লিনিকাল গবেষণা পর্যায় এবং ক্ষতের ধরনের উপর নির্ভর করে 52-76% এর সম্পূর্ণ প্রতিক্রিয়া হার দেখায়। প্রাক-ক্যান্সারজনিত ক্ষতের জন্য, 82% আংশিক বা সম্পূর্ণ প্রতিক্রিয়া দেখায়। টিউমার প্রাথমিকভাবে এবং আকারে ছোট হলে পিডিটি বিশেষত কার্যকর।">
+                            Very effective for early-stage cancers: 52-76% complete response. For precancerous lesions, 82% show improvement. Best when detected early.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-en="Can PDT be repeated if needed?" data-bn="প্রয়োজনে পিডিটি পুনরাবৃত্তি করা যেতে পারে?">Can PDT be repeated if needed?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p data-en="Yes! One of PDT's major advantages is that it can be safely repeated multiple times without cumulative toxic effects. Unlike radiation therapy which has lifetime dose limits, PDT can be administered again if necessary with no increased risk to healthy tissue. This makes it ideal for treating recurrent lesions or multiple treatment areas."
+                           data-bn="হ্যাঁ! পিডিটির একটি প্রধান সুবিধা হল এটি ক্রমবর্ধমান বিষাক্ত প্রভাব ছাড়াই নিরাপদে একাধিকবার পুনরাবৃত্তি করা যেতে পারে। রেডিয়েশন থেরাপির বিপরীতে যার আজীবন ডোজ সীমা রয়েছে, পিডিটি প্রয়োজনে স্বাস্থ্যকর টিস্যুর ঝুঁকি বৃদ্ধি ছাড়াই আবার প্রয়োগ করা যেতে পারে। এটি পুনরাবৃত্ত ক্ষত বা একাধিক চিকিৎসা এলাকা চিকিৎসার জন্য আদর্শ করে তোলে।">
+                            Yes! PDT can be safely repeated without cumulative toxic effects. Unlike radiation, there's no lifetime dose limit. Ideal for recurrent lesions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-en="Will PDT affect my ability to speak or eat?" data-bn="পিডিটি কি আমার কথা বলা বা খাওয়ার ক্ষমতাকে প্রভাবিত করবে?">Will PDT affect my ability to speak or eat?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p data-en="PDT preserves critical oral functions! Unlike surgery that may remove tissue and affect speech or swallowing, PDT targets only cancer cells while maintaining anatomical structures. Most patients experience only temporary mild discomfort when eating during the healing period (7-17 days). Normal speech, swallowing, and taste function are preserved."
+                           data-bn="পিডিটি গুরুত্বপূর্ণ মৌখিক কার্যক্রম সংরক্ষণ করে! সার্জারির বিপরীতে যা টিস্যু অপসারণ করতে পারে এবং কথা বলা বা গিলতে প্রভাবিত করতে পারে, পিডিটি শারীরবৃত্তীয় কাঠামো বজায় রেখে শুধুমাত্র ক্যান্সার কোষগুলিকে লক্ষ্য করে। বেশিরভাগ রোগী নিরাময়ের সময়কালে (7-17 দিন) খাওয়ার সময় শুধুমাত্র অস্থায়ী হালকা অস্বস্তি অনুভব করেন। স্বাভাবিক কথা বলা, গিলতে এবং স্বাদ ফাংশন সংরক্ষণ করা হয়।">
+                            PDT preserves speech, swallowing, and taste! Only temporary mild eating discomfort during healing (7-17 days). Normal functions are maintained.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-en="How much does PDT cost?" data-bn="পিডিটির খরচ কত?">How much does PDT cost?</span>
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p data-en="PDT costs vary depending on the treatment area size and number of sessions required. However, PDT is generally more cost-effective than surgery or extended chemotherapy/radiation therapy when considering total treatment costs, recovery time, and quality of life preservation. We offer consultation to discuss specific costs and available payment options. Contact us for detailed pricing information."
+                           data-bn="পিডিটি খরচ চিকিৎসা এলাকার আকার এবং প্রয়োজনীয় সেশন সংখ্যার উপর নির্ভর করে পরিবর্তিত হয়। তবে, মোট চিকিৎসা খরচ, পুনরুদ্ধার সময় এবং জীবনমান সংরক্ষণ বিবেচনা করার সময় পিডিটি সাধারণত সার্জারি বা বর্ধিত কেমোথেরাপি/রেডিয়েশন থেরাপির চেয়ে বেশি সাশ্রয়ী। আমরা নির্দিষ্ট খরচ এবং উপলব্ধ অর্থপ্রদান বিকল্পগুলি আলোচনা করার জন্য পরামর্শ প্রদান করি। বিস্তারিত মূল্য তথ্যের জন্য আমাদের সাথে যোগাযোগ করুন।">
+                            Costs vary by treatment size. Generally more cost-effective than surgery or extended chemo/radiation. Contact us for consultation and pricing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h3>
+                    <p data-en="Advanced photodynamic therapy for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি">Advanced photodynamic therapy</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
+                        <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact Info" data-bn="যোগাযোগের তথ্য">Contact Info</h4>
+                    <p>Email: info@pdtcancercenter.com</p>
+                    <p>Phone: +880-XXX-XXXXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-en="© 2026 PDT Cancer Center. All rights reserved." data-bn="© ২০২৬ পিডিটি ক্যান্সার সেন্টার। সর্বস্বত্ব সংরক্ষিত।">© 2026 PDT Cancer Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
