@@ -23,6 +23,11 @@ body {
     color: var(--text-color);
     background-color: #ffffff;
 }
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3; /* Tighter line height for headings */
+    margin-bottom: 0.5em;
+}
+
 
 .container {
     max-width: 1200px;
@@ -33,24 +38,27 @@ body {
 /* Language Toggle */
 .language-toggle {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
+    top: 15px; /* Moved up */
+    right: 15px; /* Moved right */
+    z-index: 1100; /* Ensure above everything */
     display: flex;
-    gap: 10px;
+    gap: 5px; /* Smaller gap */
     background: white;
-    padding: 8px;
+    padding: 4px; /* Smaller padding */
     border-radius: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: scale(0.9); /* Smaller size */
+    transform-origin: top right;
 }
 
 .lang-btn {
-    padding: 8px 16px;
+    padding: 6px 12px; /* Smaller padding */
     border: none;
     background: transparent;
     color: var(--gray-color);
     border-radius: 50px;
     cursor: pointer;
+    font-size: 0.9rem; /* Smaller font */
     font-weight: 500;
     transition: var(--transition);
 }
@@ -81,18 +89,34 @@ body {
     align-items: center;
 }
 
+
 .nav-brand h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Reduced from 1.5rem to prevent crowding */
     color: var(--primary-color);
     font-weight: 700;
+    white-space: nowrap; /* Prevent wrapping */
+    line-height: 1.2;
 }
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduced gap */
+    cursor: pointer;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem; /* Reduced from 2rem */
     align-items: center;
+    margin-right: 140px;
+    flex-wrap: nowrap; /* Prevent wrapping, let it overflow to burger if needed */
 }
+
 
 .nav-menu a {
     text-decoration: none;
@@ -626,6 +650,22 @@ button[type="submit"]:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Reset nav menu margin on mobile */
+    .nav-menu {
+        margin-right: 0 !important;
+    }
+
+    /* Move toggle to avoid hamburger on mobile */
+    .language-toggle {
+        top: 15px;
+        right: 60px; /* Move left of the hamburger */
+        transform: scale(0.8);
+    }
+    
+    .hamburger {
+        z-index: 1101; /* Ensure hamburger is clickable */
+    }
+
     .hamburger {
         display: flex;
     }
@@ -674,5 +714,56 @@ button[type="submit"]:hover {
 
     .footer-content {
         grid-template-columns: 1fr;
+    }
+}
+/* Active Menu Highlight */
+.nav-menu a.active {
+    color: var(--primary-color);
+}
+
+.nav-menu a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+/* Nav Brand Pointer */
+.nav-brand {
+    cursor: pointer;
+}
+
+/* Brand Logo Styles */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Responsive Adjustments for Zoom/Bangla */
+@media (max-width: 992px) {
+    .nav-menu {
+        gap: 1rem;
+        margin-right: 100px;
+    }
+    .nav-brand h1 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        margin-right: 0; /* Reset for mobile menu */
     }
 }

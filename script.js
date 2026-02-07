@@ -37,6 +37,12 @@ window.addEventListener('DOMContentLoaded', () => {
     
     // Initialize contact form
     initContactForm();
+    
+    // Highlight active menu
+    highlightActiveMenu();
+    
+    // Initialize Brand Link
+    initBrandLink();
 });
 
 // Mobile Menu Toggle
@@ -148,3 +154,27 @@ document.querySelectorAll('.card, .stat-box, .research-card').forEach(el => {
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+
+function highlightActiveMenu() {
+    const path = window.location.pathname;
+    const page = path.split("/").pop();
+    // Default to index.html if empty path
+    const target = (page === "" || page === "/") ? "index.html" : page;
+
+    const menuLinks = document.querySelectorAll('.nav-menu a');
+    menuLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === target) {
+            link.classList.add('active');
+        }
+    });
+}
+
+function initBrandLink() {
+    const brand = document.querySelector('.nav-brand');
+    if (brand) {
+        brand.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    }
+}
