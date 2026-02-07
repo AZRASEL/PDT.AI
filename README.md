@@ -40,7 +40,7 @@ A professional, bilingual (English/Bangla) website for a Photodynamic Therapy (P
 5. Go to Settings → Pages
 6. Under "Source", select "main" branch and "/" (root) folder
 7. Click "Save"
-8. Your site will be live at: `https://AZRASEL.github.io/Oral Cancer PDT`
+8. Your site will be live at: `https://AZRASEL.github.io/PDT Clinic`
 
 ### Method 2: Git Command Line
 
@@ -58,7 +58,7 @@ git add .
 git commit -m "Initial commit: PDT clinic website"
 
 # Add remote repository (replace with your repo URL)
-git remote add origin https://github.com/yourusername/pdt-clinic-website.git
+git remote add origin https://github.com/AZRASEL/pdt-clinic-website.git
 
 # Push to GitHub
 git branch -M main
