@@ -40,7 +40,7 @@ A professional, bilingual (English/Bangla) website for a Photodynamic Therapy (P
 5. Go to Settings → Pages
 6. Under "Source", select "main" branch and "/" (root) folder
 7. Click "Save"
-8. Your site will be live at: `https://yourusername.github.io/pdt-clinic-website`
+8. Your site will be live at: `https://AZRASEL.github.io/Oral Cancer PDT`
 
 ### Method 2: Git Command Line
 
