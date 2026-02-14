@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="Pictures/PDT logo.png">
+    <link rel="icon" type="image/png" href="Pictures/PDT logo.png">
     <title>About PDT | Photodynamic Therapy</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="language-toggle">
-        <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
-        <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
-    </div>
-
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
                 <img src="Pictures/PDT logo.png" alt="PDT Logo" class="nav-logo">
-                <h1 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h1>
+                <span data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</span>
             </div>
+            
+            <div class="language-toggle">
+                <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">BN</button>
+            </div>
+
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
-                <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
-                <li><a href="how-it-works.html" data-en="How It Works" data-bn="কীভাবে কাজ করে">How It Works</a></li>
+                <li><a href="about.html" class="active" data-en="About" data-bn="সম্পর্কে">About</a></li>
+                <li><a href="how-it-works.html" data-en="Process" data-bn="পদ্ধতি">Process</a></li>
                 <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
-                <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
+                <li><a href="clinic.html" data-en="Clinic" data-bn="ক্লিনিক">Clinic</a></li>
                 <li><a href="faq.html" data-en="FAQ" data-bn="প্রশ্নোত্তর">FAQ</a></li>
                 <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
             </ul>
+            
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -37,149 +42,187 @@
         </div>
     </nav>
 
-    <section class="hero" style="padding: 80px 20px;">
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-slideshow">
+            <div class="slide active" style="background-image: url('Pictures/about PDT.png')"></div>
+            <div class="slide" style="background-image: url('Pictures/encient PDT.png')"></div>
+            <div class="slide" style="background-image: url('Pictures/PDT visualization 1.png')"></div>
+        </div>
+        <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1 class="hero-title" data-en="About Photodynamic Therapy" data-bn="ফটোডাইনামিক থেরাপি সম্পর্কে">About Photodynamic Therapy</h1>
-            <p class="hero-subtitle" data-en="Understanding the science and benefits of PDT" data-bn="পিডিটির বিজ্ঞান এবং সুবিধাগুলি বুঝতে">Understanding the science and benefits of PDT</p>
+            <h1 class="hero-title" data-en="About Photodynamic Therapy" data-bn="ফটোডাইনামিক থেরাপি সম্পর্কে" data-animate>About Photodynamic Therapy</h1>
+            <p class="hero-subtitle" data-en="Understanding the science and benefits of PDT" data-bn="পিডিটির বিজ্ঞান এবং সুবিধাগুলি বুঝতে" data-animate>Understanding the science and benefits of PDT</p>
+            <div class="hero-scroll-links" data-animate>
+                <a href="#what-is-pdt" class="scroll-link" data-en="What is PDT?" data-bn="PDT কী?">What is PDT?</a>
+                <a href="#history-pdt" class="scroll-link" data-en="History" data-bn="ইতিহাস">History</a>
+                <a href="#importance-pdt" class="scroll-link" data-en="Importance" data-bn="গুরুত্ব">Importance</a>
+            </div>
         </div>
-    </section>
+    </header>
 
-    <section class="section bg-light">
+    <!-- What is PDT Section -->
+    <section id="what-is-pdt" class="section bg-light">
         <div class="container">
-            <h2 class="section-title" data-en="What is PDT?" data-bn="পিডিটি কী?">What is PDT?</h2>
-            <div class="content-grid">
-                <div class="content-text">
-                    <p data-en="Photodynamic Therapy (PDT) is an innovative medical treatment that combines three essential elements: a photosensitizer (light-sensitive drug), light of a specific wavelength, and oxygen naturally present in tissues. When these elements come together, they create a powerful reaction that selectively destroys cancer cells while preserving healthy tissue."
-                       data-bn="ফটোডাইনামিক থেরাপি (পিডিটি) একটি উদ্ভাবনী চিকিৎসা চিকিৎসা যা তিনটি প্রয়োজনীয় উপাদান একত্রিত করে: একটি ফটোসেন্সিটাইজার (আলো-সংবেদনশীল ওষুধ), একটি নির্দিষ্ট তরঙ্গদৈর্ঘ্যের আলো এবং টিস্যুতে স্বাভাবিকভাবে উপস্থিত অক্সিজেন। যখন এই উপাদানগুলি একসাথে আসে, তারা একটি শক্তিশালী প্রতিক্রিয়া তৈরি করে যা স্বাস্থ্যকর টিস্যু সংরক্ষণ করার সময় নির্বাচিতভাবে ক্যান্সার কোষ ধ্বংস করে।">
-                        Photodynamic Therapy (PDT) is an innovative medical treatment that combines three essential elements: a photosensitizer (light-sensitive drug), light of a specific wavelength, and oxygen naturally present in tissues.
+            <div class="grid-2">
+                <div class="content-text" data-animate>
+                    <h2 class="section-title" style="text-align: left; left: 0; transform: none;" data-en="1. What is Photodynamic Therapy (PDT)?" data-bn="১. ফোটোডাইনামিক থেরাপি (PDT) কী?">1. What is Photodynamic Therapy (PDT)?</h2>
+                    <p data-en="Photodynamic therapy (PDT) is a medical treatment that uses a combination of a light‑sensitive drug and a specific color of light to destroy unwanted or diseased cells, such as cancer cells or abnormal skin cells."
+                       data-bn="ফোটোডাইনামিক থেরাপি (PDT) এমন একটি চিকিৎসা পদ্ধতি, যেখানে আলো‑সংবেদনশীল একটি ওষুধ এবং নির্দিষ্ট রঙের আলো একসঙ্গে ব্যবহার করে অপ্রয়োজনীয় বা রোগগ্রস্ত কোষ, যেমন ক্যান্সার কোষ বা অস্বাভাবিক ত্বক কোষ ধ্বংস করা হয়।">
+                        Photodynamic therapy (PDT) is a medical treatment that uses a combination of a light‑sensitive drug and a specific color of light to destroy unwanted or diseased cells.
                     </p>
-                    <p data-en="PDT has been successfully used for decades to treat various cancers and precancerous conditions. For oral cancer, PDT offers unique advantages due to the accessibility of the oral cavity, making it ideal for precise light delivery and treatment monitoring."
-                       data-bn="পিডিটি সফলভাবে বিভিন্ন ক্যান্সার এবং প্রাক-ক্যান্সারজনিত অবস্থার চিকিৎসার জন্য কয়েক দশক ধরে ব্যবহৃত হয়েছে। মৌখিক ক্যান্সারের জন্য, মৌখিক গহ্বরের অ্যাক্সেসযোগ্যতার কারণে পিডিটি অনন্য সুবিধা প্রদান করে, এটি সুনির্দিষ্ট আলো বিতরণ এবং চিকিৎসা পর্যবেক্ষণের জন্য আদর্শ করে তোলে।">
-                        PDT has been successfully used for decades to treat various cancers and precancerous conditions. For oral cancer, PDT offers unique advantages due to the accessibility of the oral cavity.
-                    </p>
+                    <div class="expand-content" style="display: none;">
+                        <p data-en="The drug, known as a photosensitizer, is given as a cream, pill, or injection and then allowed to accumulate in the target tissue more than in normal tissue. After a delay (the drug–light interval), the treated area is illuminated with a specific wavelength of light, often from a laser or LED, that activates the photosensitizer."
+                           data-bn="এই ওষুধকে ফটোসেন্সিটাইজার বলা হয়, যা ক্রিম, ট্যাবলেট বা ইনজেকশন হিসেবে দেওয়া হয় এবং এরপর স্বাভাবিক টিস্যুর তুলনায় লক্ষ্যবস্তুর টিস্যুতে বেশি জমা হতে দেওয়া হয়। একটি নির্দিষ্ট সময় বিরতির (ড্রাগ–লাইট ইন্টারভ্যাল) পর নির্দিষ্ট তরঙ্গদৈর্ঘ্যের আলো, যা প্রায়ই লেজার বা LED থেকে আসে, ওই চিকিৎসিত এলাকায় ফেলা হয় যাতে ফটোসেন্সিটাইজার সক্রিয় হয়।">
+                            The drug, known as a photosensitizer, is given as a cream, pill, or injection and then allowed to accumulate in the target tissue more than in normal tissue.
+                        </p>
+                        <p data-en="When activated, the photosensitizer transfers energy to oxygen naturally present in the tissue, creating reactive oxygen species that damage cell structures and blood vessels feeding the abnormal tissue, leading to highly localized cell death."
+                           data-bn="সক্রিয় হওয়ার পর ফটোসেন্সিটাইজার টিস্যুতে স্বাভাবিকভাবে উপস্থিত অক্সিজেনের কাছে শক্তি স্থানান্তর করে, যার ফলে রিঅ্যাকটিভ অক্সিজেন স্পিসিস তৈরি হয়; এগুলো কোষের গঠন ও অস্বাভাবিক টিস্যুকে রক্ত সরবরাহকারী রক্তনালিকে ক্ষতিগ্রস্ত করে, এবং খুব স্থানীয়ভাবে কোষমৃত্যু ঘটায়।">
+                            When activated, the photosensitizer transfers energy to oxygen naturally present in the tissue, creating reactive oxygen species that damage cell structures and blood vessels.
+                        </p>
+                        <p data-en="Because both the drug and light must be present in the same place at the same time, PDT can offer selective destruction of diseased tissue while sparing much of the surrounding healthy tissue, and it is generally considered a minimally invasive, outpatient procedure for many indications."
+                           data-bn="কারণ ওষুধ ও আলো—দুটোকেই একই সময়ে একই স্থানে থাকতে হয়, PDT রোগগ্রস্ত টিস্যু বেছে ধ্বংস করতে পারে, আশপাশের অনেক সুস্থ টিস্যুকে তুলনামূলকভাবে অক্ষত রাখে, এবং বহু ক্ষেত্রে একে সাধারণত ন্যূনতম আক্রমণাত্মক (মিনিমালি ইনভেসিভ), বহির্বিভাগভিত্তিক (আউটপেশেন্ট) চিকিৎসা হিসেবে ধরা হয়।">
+                            Because both the drug and light must be present in the same place at the same time, PDT can offer selective destruction of diseased tissue while sparing surrounding healthy tissue.
+                        </p>
+                        <p class="citation" style="font-size: 0.85rem; color: var(--text-light); font-style: italic; margin-top: 1rem;">
+                            <strong data-en="1. Sources for “What is Photodynamic Therapy (PDT)?”" data-bn="১. “ফোটোডাইনামিক থেরাপি (PDT) কী?” এর উৎসসমূহ">1. Sources for “What is Photodynamic Therapy (PDT)?”</strong><br>
+                            <a href="https://www.yalemedicine.org/conditions/photodynamic-therapy" target="_blank" style="color: var(--secondary-color);">Yale Medicine</a>, 
+                            <a href="https://www.roswellpark.org/cancer-care/treatments/photodynamic-therapy" target="_blank" style="color: var(--secondary-color);">Roswell Park</a>, 
+                            <a href="https://my.clevelandclinic.org/health/procedures/photodynamic-therapy-pdt" target="_blank" style="color: var(--secondary-color);">Cleveland Clinic</a>, 
+                            <a href="https://www.cancer.gov/about-cancer/treatment/types/photodynamic-therapy" target="_blank" style="color: var(--secondary-color);">National Cancer Institute (NCI)</a>, 
+                            <a href="https://www.mayoclinic.org/tests-procedures/photodynamic-therapy/about/pac-20385027" target="_blank" style="color: var(--secondary-color);">Mayo Clinic</a>, 
+                            <a href="https://petrindermatology.com/treatments-blog/pdt" target="_blank" style="color: var(--secondary-color);">Petrin Dermatology</a>, 
+                            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8470722/" target="_blank" style="color: var(--secondary-color);">PMC Review: Principles & Photosensitizers</a>, 
+                            <a href="https://www.cancer.org/cancer/managing-cancer/treatment-types/photodynamic-therapy.html" target="_blank" style="color: var(--secondary-color);">American Cancer Society</a>, 
+                            <a href="https://www.asds.net/skin-experts/skin-treatments/photodynamic-therapy-for-premalignant-growths" target="_blank" style="color: var(--secondary-color);">ASDS: Skin Experts</a>, 
+                            <a href="https://changsurgery.com/photodynamic-therapy/" target="_blank" style="color: var(--secondary-color);">Chang Dermatology</a>
+                            <br>
+                            <span data-en="Note: These sources explain the definition of PDT, how it works (photosensitizers, light, oxygen), the conditions it treats, and the procedural steps." data-bn="সংক্ষিপ্ত ব্যাখ্যা: উপরের উৎসগুলো PDT‑র সংজ্ঞা, এটি কীভাবে কাজ করে (ফটোসেন্সিটাইজার, আলো, অক্সিজেন), কোন কোন রোগে ব্যবহৃত হয় এবং প্রক্রিয়ার ধাপগুলো ব্যাখ্যা করে।">Note: These sources explain the definition of PDT, how it works (photosensitizers, light, oxygen), the conditions it treats, and the procedural steps.</span>
+                        </p>
+                    </div>
+                    <button class="btn btn-secondary read-more-btn" data-en="Read Full Article" data-bn="পুরো নিবন্ধ পড়ুন">Read Full Article <i style="margin-left: 8px;">&rarr;</i></button>
                 </div>
-                <div class="content-image">
-                    <img src="Pictures/PDT Mechanism Diagram.png" alt="PDT Mechanism Diagram" style="width: 100%; height: auto; display: block;" data-en-alt="PDT Mechanism Diagram" data-bn-alt="পিডিটি মেকানিজম ডায়াগ্রাম">
+                <div class="content-image" data-animate>
+                    <img src="Pictures/about PDT.png" alt="What is PDT" data-en-alt="What is PDT" data-bn-alt="পিডিটি কী">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
+    <!-- History Section -->
+    <section id="history-pdt" class="section">
         <div class="container">
-            <h2 class="section-title" data-en="History and Development" data-bn="ইতিহাস এবং উন্নয়ন">History and Development</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <h3 data-en="1900s - Discovery" data-bn="১৯০০এর দশক - আবিষ্কার">1900s - Discovery</h3>
-                    <p data-en="The phenomenon underlying PDT was discovered in Munich, Germany, when researchers observed that certain dyes combined with light could kill cells."
-                       data-bn="পিডিটির অন্তর্নিহিত ঘটনাটি মিউনিখ, জার্মানিতে আবিষ্কৃত হয়েছিল, যখন গবেষকরা লক্ষ্য করেছিলেন যে আলোর সাথে মিলিত নির্দিষ্ট রঞ্জক কোষ মারতে পারে।">
-                        The phenomenon underlying PDT was discovered in Munich, Germany, when researchers observed that certain dyes combined with light could kill cells.
-                    </p>
+            <div class="grid-2">
+                <div class="content-image" data-animate>
+                    <img src="Pictures/encient PDT.png" alt="History of PDT" data-en-alt="History of PDT" data-bn-alt="পিডিটির ইতিহাস">
                 </div>
-                <div class="card">
-                    <h3 data-en="1970s-1990s - Clinical Trials" data-bn="১৯৭০-১৯৯০এর দশক - ক্লিনিকাল ট্রায়াল">1970s-1990s - Clinical Trials</h3>
-                    <p data-en="Extensive research led to FDA approval of Photofrin for various cancers. PDT began being used for head and neck cancers with promising results."
-                       data-bn="বিস্তৃত গবেষণা বিভিন্ন ক্যান্সারের জন্য ফটোফ্রিনের এফডিএ অনুমোদনের দিকে পরিচালিত করেছিল। পিডিটি প্রতিশ্রুতিশীল ফলাফলের সাথে মাথা এবং ঘাড়ের ক্যান্সারের জন্য ব্যবহার করা শুরু হয়েছিল।">
-                        Extensive research led to FDA approval of Photofrin for various cancers. PDT began being used for head and neck cancers with promising results.
+                <div class="content-text" data-animate>
+                    <h2 class="section-title" style="text-align: left; left: 0; transform: none;" data-en="2. A Brief History of Photodynamic Therapy" data-bn="২. ফোটোডাইনামিক থেরাপির একটি সংক্ষিপ্ত ইতিহাস">2. A Brief History of Photodynamic Therapy</h2>
+                    <p data-en="The roots of photodynamic therapy go back over a century to early observations that certain dyes could make microorganisms or tissues highly sensitive to light."
+                       data-bn="ফোটোডাইনামিক থেরাপির শিকড় এক শতাব্দীরও বেশি আগে পর্যন্ত প্রসারিত, যখন দেখা যায় যে কিছু রঞ্জক পদার্থ মাইক্রোঅর্গানিজম বা টিস্যুকে আলোর প্রতি অত্যন্ত সংবেদনশীল করে তুলতে পারে।">
+                        The roots of PDT go back over a century to early observations that certain dyes could make microorganisms highly sensitive to light.
                     </p>
-                </div>
-                <div class="card">
-                    <h3 data-en="2000s-Present - Innovation" data-bn="২০০০এর দশক-বর্তমান - উদ্ভাবন">2000s-Present - Innovation</h3>
-                    <p data-en="Development of second-generation photosensitizers, improved light delivery systems, and combination therapies have enhanced PDT effectiveness significantly."
-                       data-bn="দ্বিতীয় প্রজন্মের ফটোসেন্সিটাইজার, উন্নত আলো বিতরণ ব্যবস্থা এবং সংমিশ্রণ থেরাপির বিকাশ পিডিটির কার্যকারিতা উল্লেখযোগ্যভাবে বৃদ্ধি করেছে।">
-                        Development of second-generation photosensitizers, improved light delivery systems, and combination therapies have enhanced PDT effectiveness significantly.
-                    </p>
+                    <div class="expand-content" style="display: none;">
+                        <p data-en="Around 1900, Oscar Raab and Hermann von Tappeiner described the “photodynamic action” of dyes like acridine on protozoa; they recognized that light and oxygen together with a photosensitizing compound could cause cell death, laying the conceptual foundation for PDT."
+                           data-bn="প্রায় ১৯০০ সালের দিকে অস্কার রাব এবং হারম্যান ফন টাপাইনার (Hermann von Tappeiner) অ্যাক্রিডিনের মতো রঞ্জক পদার্থের “photodynamic action” প্রোটোজোয়ার ওপর বর্ণনা করেন; তারা বোঝেন যে আলো, অক্সিজেন এবং একটি ফটোসেন্সিটাইজিং যৌগ একসঙ্গে থাকলে কোষমৃত্যু ঘটতে পারে, যা PDT‑র ধারণাগত ভিত্তি গড়ে তোলে।">
+                            Around 1900, researchers described the “photodynamic action” of dyes like acridine, laying the conceptual foundation for PDT.
+                        </p>
+                        <p data-en="In the mid‑20th century, Samuel Schwartz and colleagues developed hematoporphyrin derivatives (HpD) that preferentially accumulated in tumors, and Thomas Dougherty and others at Roswell Park later demonstrated that HpD and red light together could selectively destroy cancer cells, bringing PDT into clinical oncology research."
+                           data-bn="২০শ শতকের মাঝামাঝি স্যামুয়েল শোয়ার্টজ এবং তাঁর সহকর্মীরা এমন হেমাটোপর্ফাইরিন ডেরিভেটিভ (HpD) তৈরি করেন, যা টিউমারে তুলনামূলক বেশি জমা হয়, এবং পরবর্তীতে থমাস ডোহার্টি ও অন্যান্য গবেষকেরা রসওয়েল পার্ক‑এ প্রাণীদেহ ও রোগীদের ওপর দেখান যে HpD এবং লাল আলো একত্রে দিলে ক্যান্সার কোষ বেছে ধ্বংস করা যায়, ফলে PDT ক্লিনিক্যাল অনকোলজি গবেষণার মূলধারায় আসে।">
+                            In the mid‑20th century, researchers developed compounds that preferentially accumulated in tumors, bringing PDT into clinical oncology research at Roswell Park.
+                        </p>
+                        <p data-en="This work led to first‑generation clinical drugs like Photofrin and the acceptance of PDT as a recognized cancer treatment for conditions including esophageal and lung cancers, as well as certain skin lesions."
+                           data-bn="এই কাজের ফলাফলে Photofrin‑এর মতো প্রথম‑প্রজন্মের ক্লিনিক্যাল ওষুধ তৈরি হয় এবং খাদ্যনালি (ইসোফাগাস), ফুসফুসের ক্যান্সার ও কিছু ত্বকজনিত ক্ষতসহ নানা অবস্থার জন্য PDT‑কে ক্যান্সার চিকিৎসার স্বীকৃত পদ্ধতি হিসেবে গ্রহণ করা হয়।">
+                            This work led to first‑generation clinical drugs and the formal recognition of PDT as a treatment for esophageal, lung, and skin cancers.
+                        </p>
+                        <p data-en="Over the last few decades, the field has expanded with second‑ and third‑generation photosensitizers (including porphyrins, chlorins, phthalocyanines, and research on natural products), improved light delivery systems like fiber‑optic probes and LEDs, and applications beyond cancer into ophthalmology, dermatology, and infection control."
+                           data-bn="গত কয়েক দশকে এই ক্ষেত্রটি আরও প্রসারিত হয়েছে দ্বিতীয় ও তৃতীয়‑প্রজন্মের ফটোসেন্সিটাইজার (যার মধ্যে পোরফাইরিন, ক্লোরিন, ফথালোসায়ানিন এবং প্রাকৃতিক উৎসজাত যৌগের ওপর গবেষণা অন্তর্ভুক্ত), উন্নত আলোকপ্রদান পদ্ধতি যেমন ফাইবার‑অপটিক প্রোব ও LED, এবং ক্যান্সারের বাইরে চোখের চিকিৎসা, ত্বকবিদ্যা ও সংক্রমণ নিয়ন্ত্রণের মতো ক্ষেত্রেও প্রয়োগের মাধ্যমে।">
+                            The field has since expanded with new photosensitizers, improved light delivery systems, and applications beyond cancer into dermatology and ophthalmology.
+                        </p>
+                        <p class="citation" style="font-size: 0.85rem; color: var(--text-light); font-style: italic; margin-top: 1rem;">
+                            <strong data-en="2. Sources for “A brief history of Photodynamic Therapy”" data-bn="২. “ফোটোডাইনামিক থেরাপির একটি সংক্ষিপ্ত ইতিহাস” এর উৎসসমূহ">2. Sources for “A brief history of Photodynamic Therapy”</strong><br>
+                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3133245/" target="_blank" style="color: var(--secondary-color);">NIH/PMC: A Brief History</a>, 
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/14605069/" target="_blank" style="color: var(--secondary-color);">PubMed: Hundred-year history of PDT</a>, 
+                            <a href="https://en.wikipedia.org/wiki/Photodynamic_therapy" target="_blank" style="color: var(--secondary-color);">Wikipedia: Photodynamic Therapy</a>, 
+                            <a href="https://academic.oup.com/jnci/article/90/12/889/1007783" target="_blank" style="color: var(--secondary-color);">JNCI: Journal of the National Cancer Institute</a>, 
+                            <a href="https://www.sciencedirect.com/science/article/abs/pii/S157210000500100X" target="_blank" style="color: var(--secondary-color);">ScienceDirect: Historical Review (North America)</a>, 
+                            <a href="https://aacrjournals.org/cancerres/article/59/7_Supplement/1635s/467882/Photodynamic-Therapy-What-s-Past-Is-Prologue" target="_blank" style="color: var(--secondary-color);">Cancer Research: What’s Past Is Prologue</a>, 
+                            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8470722/" target="_blank" style="color: var(--secondary-color);">PMC Review: Historical Principles</a>
+                            <br>
+                            <span data-en="Note: These sources provide detailed historical information on the early work of Raab and von Tappeiner, the discovery of hematoporphyrin derivatives (HpD), clinical trials by Dougherty and colleagues, and the evolution of photosensitizers." data-bn="সংক্ষিপ্ত ব্যাখ্যা: এই উৎসগুলো Raab ও von Tappeiner‑এর প্রাথমিক কাজ, হেমাটোপর্ফাইরিন ডেরিভেটিভ (HpD) আবিষ্কার, Dougherty ও সহকর্মীদের ক্লিনিকাল ট্রায়াল এবং প্রথম‑দ্বিতীয়‑তৃতীয় প্রজন্মের ফটোসেন্সিটাইজারের বিকাশ নিয়ে বিস্তারিত ঐতিহাসিক তথ্য দেয়।">Note: These sources provide detailed historical information on the early work of Raab and von Tappeiner, the discovery of hematoporphyrin derivatives (HpD), clinical trials by Dougherty and colleagues, and the evolution of photosensitizers.</span>
+                        </p>
+                    </div>
+                    <button class="btn btn-secondary read-more-btn" data-en="Read Full Article" data-bn="পুরো নিবন্ধ পড়ুন">Read Full Article <i style="margin-left: 8px;">&rarr;</i></button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section bg-light">
+    <!-- Importance Section -->
+    <section id="importance-pdt" class="section bg-light">
         <div class="container">
-            <h2 class="section-title" data-en="Key Advantages of PDT" data-bn="পিডিটির মূল সুবিধা">Key Advantages of PDT</h2>
-            <div class="content-grid">
-                <div>
-                    <h3 data-en="Selective Targeting" data-bn="নির্বাচনী লক্ষ্যকরণ">Selective Targeting</h3>
-                    <p data-en="PDT targets malignant cells while sparing healthy tissues. Photosensitizers accumulate preferentially in rapidly dividing cancer cells, making treatment highly precise."
-                       data-bn="পিডিটি স্বাস্থ্যকর টিস্যু রক্ষা করার সময় দূষিত কোষগুলিকে লক্ষ্য করে। ফটোসেন্সিটাইজাররা দ্রুত বিভাজিত ক্যান্সার কোষে অগ্রাধিকার সংগ্রহ করে, চিকিৎসাকে অত্যন্ত সুনির্দিষ্ট করে তোলে।">
-                        PDT targets malignant cells while sparing healthy tissues. Photosensitizers accumulate preferentially in rapidly dividing cancer cells.
+            <div class="grid-2">
+                <div class="content-text" data-animate>
+                    <h2 class="section-title" style="text-align: left; left: 0; transform: none;" data-en="3. Why Photodynamic Therapy is Important" data-bn="৩. ফোটোডাইনামিক থেরাপি কেন গুরুত্বপূর্ণ">3. Why Photodynamic Therapy is Important</h2>
+                    <p data-en="Photodynamic therapy is important because it offers a targeted, minimally invasive way to treat a range of diseases, particularly certain cancers and precancerous skin conditions, while limiting damage to surrounding healthy tissue."
+                       data-bn="ফোটোডাইনামিক থেরাপি গুরুত্বপূর্ণ, কারণ এটি বিভিন্ন রোগ, বিশেষ করে কিছু নির্দিষ্ট ধরনের ক্যান্সার ও প্রাক‑ক্যান্সার ত্বকজনিত অবস্থার চিকিৎসায় আশপাশের সুস্থ টিস্যুর ক্ষতি সীমিত রেখে লক্ষ্যনির্ভর ও তুলনামূলকভাবে ন্যূনতম আক্রমণাত্মক একটি উপায় প্রদান করে।">
+                        PDT offers a targeted, minimally invasive treatment for cancers and precancers, preserving organ function and causing less scarring than traditional methods.
                     </p>
+                    <div class="expand-content" style="display: none;">
+                        <p data-en="Its selectivity arises from three controllable components—drug, light, and oxygen—which can be tuned to confine the effect to a defined area; making PDT especially valuable for localized tumors on the skin, in the esophagus, or in the airways where light can be delivered precisely."
+                           data-bn="এর নির্বাচক ক্ষমতা আসে তিনটি নিয়ন্ত্রণযোগ্য উপাদান—ওষুধ, আলো এবং অক্সিজেন—থেকে, যেগুলোকে এমনভাবে নিয়ন্ত্রণ করা যায় যাতে প্রভাব নির্দিষ্ট একটি এলাকার মধ্যে সীমাবদ্ধ থাকে; ফলে ত্বক, খাদ্যনালি বা শ্বাসনালির এমন স্থানীয় টিউমারের ক্ষেত্রে PDT বিশেষভাবে কার্যকর, যেখানে আলো খুব নির্ভুলভাবে পৌঁছে দেওয়া সম্ভব।">
+                            Its selectivity arises from controllable components—drug, light, and oxygen—making it especially valuable for localized tumors.
+                        </p>
+                        <p data-en="Compared with surgery or some forms of radiation and chemotherapy, PDT often causes less scarring and can preserve organ structure and function; it can be repeated in the same area if needed because it does not rely on cumulative radiation dose."
+                           data-bn="অস্ত্রোপচার বা কিছু ধরনের রেডিয়েশন ও কেমোথেরাপির তুলনায় PDT প্রায়ই কম দাগ ফেলে এবং অঙ্গের গঠন ও কার্যকারিতা ভালোভাবে সংরক্ষণ করতে পারে; প্রয়োজনে একই জায়গায় বারবার ব্যবহার করা যায়, কারণ এটি সঞ্চিত বিকিরণ ডোজের ওপর নির্ভর করে না।">
+                            Compared with surgery or radiation, PDT often causes less scarring and preserves organ function, and can be repeated if necessary.
+                        </p>
+                        <p data-en="Beyond direct tumor killing, PDT can also shut down tumor blood vessels and stimulate local immune responses, which has inspired ongoing research into combination therapies with immunotherapy and novel photosensitizers."
+                           data-bn="সরাসরি টিউমার কোষ ধ্বংসের বাইরে PDT টিউমারের রক্তনালিকাও বন্ধ করে দিতে পারে এবং স্থানীয় ইমিউন প্রতিক্রিয়া উদ্দীপিত করতে পারে, যা ইমিউনোথেরাপি ও নতুন ফটোসেন্সিটাইজারের সঙ্গে যৌথ থেরাপি নিয়ে চলমান গবেষণাকে উৎসাহিত করেছে।">
+                            Beyond direct tumor killing, PDT can also shut down tumor blood vessels and stimulate local immune responses.
+                        </p>
+                        <p data-en="As light delivery technologies, imaging guidance, and photosensitizer chemistry continue to improve, PDT is increasingly seen as an important part of the broader precision‑medicine toolbox for oncology and other fields such as dermatology, ophthalmology, and infectious disease."
+                           data-bn="আলো সরবরাহ প্রযুক্তি, ইমেজিং‑নির্দেশিত টার্গেটিং এবং ফটোসেন্সিটাইজার রাসায়ন ক্রমাগত উন্নত হওয়ার সঙ্গে সঙ্গে, PDT ধীরে ধীরে অনকোলজি এবং ত্বকবিদ্যা, চক্ষুবিদ্যা ও সংক্রামক রোগসহ অন্যান্য ক্ষেত্রের জন্য আরও বৃহত্তর প্রিসিশন‑মেডিসিন সরঞ্জামবাক্সের একটি গুরুত্বপূর্ণ অংশ হিসেবে দেখা হচ্ছে।">
+                            As technologies improve, PDT is increasingly seen as an important part of the broader precision‑medicine toolbox for oncology and other fields.
+                        </p>
+                        <p class="citation" style="font-size: 0.85rem; color: var(--text-light); font-style: italic; margin-top: 1rem;">
+                            <strong data-en="3. Sources for “Why Photodynamic Therapy is important”" data-bn="৩. “ফোটোডাইনামিক থেরাপি কেন গুরুত্বপূর্ণ” এর উৎসসমূহ">3. Sources for “Why Photodynamic Therapy is important”</strong><br>
+                            <a href="https://www.roswellpark.org/cancer-care/treatments/photodynamic-therapy" target="_blank" style="color: var(--secondary-color);">Roswell Park</a>, 
+                            <a href="https://my.clevelandclinic.org/health/procedures/photodynamic-therapy-pdt" target="_blank" style="color: var(--secondary-color);">Cleveland Clinic</a>, 
+                            <a href="https://www.mayoclinic.org/tests-procedures/photodynamic-therapy/about/pac-20385027" target="_blank" style="color: var(--secondary-color);">Mayo Clinic</a>, 
+                            <a href="https://changsurgery.com/photodynamic-therapy/" target="_blank" style="color: var(--secondary-color);">Chang Dermatology</a>, 
+                            <a href="https://www.cancer.gov/about-cancer/treatment/types/photodynamic-therapy" target="_blank" style="color: var(--secondary-color);">National Cancer Institute (NCI)</a>, 
+                            <a href="https://www.cancer.org/cancer/managing-cancer/treatment-types/photodynamic-therapy.html" target="_blank" style="color: var(--secondary-color);">American Cancer Society (ACS)</a>, 
+                            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8470722/" target="_blank" style="color: var(--secondary-color);">PMC Review: Mechanisms & Advantages</a>, 
+                            <a href="https://www.frontiersin.org/journals/chemistry/articles/10.3389/fchem.2021.686303/full" target="_blank" style="color: var(--secondary-color);">Frontiers in Chemistry: Treatment & Diagnosis</a>, 
+                            <a href="https://aacrjournals.org/cancerres/article/59/7_Supplement/1635s/467882/Photodynamic-Therapy-What-s-Past-Is-Prologue" target="_blank" style="color: var(--secondary-color);">Cancer Research: Advantages & Combinations</a>
+                            <br>
+                            <span data-en="Note: These sources highlight the mechanisms, indications, and clinical advantages of PDT, including its selective nature and combination therapy potential." data-bn="সংক্ষিপ্ত ব্যাখ্যা: এই উৎসগুলো PDT-র মেকানিজম, ইন্ডিকেশন এবং ক্লিনিক্যাল সুবিধাসমূহ, বিশেষ করে এর সিলেক্টিভ নেচার এবং কম্বিনেশন থেরাপির সম্ভাবনা তুলে ধরে।">Note: These sources highlight the mechanisms, indications, and clinical advantages of PDT, including its selective nature and combination therapy potential.</span>
+                        </p>
+                    </div>
+                    <button class="btn btn-secondary read-more-btn" data-en="Read Full Article" data-bn="পুরো নিবন্ধ পড়ুন">Read Full Article <i style="margin-left: 8px;">&rarr;</i></button>
                 </div>
-                <div>
-                    <h3 data-en="Minimal Invasiveness" data-bn="ন্যূনতম আক্রমণাত্মকতা">Minimal Invasiveness</h3>
-                    <p data-en="Unlike surgery, PDT doesn't require cutting or removal of tissue. Light is delivered directly to the affected area using fiber optic devices."
-                       data-bn="সার্জারির বিপরীতে, পিডিটির টিস্যু কাটা বা অপসারণের প্রয়োজন হয় না। ফাইবার অপটিক ডিভাইস ব্যবহার করে আক্রান্ত এলাকায় সরাসরি আলো সরবরাহ করা হয়।">
-                        Unlike surgery, PDT doesn't require cutting or removal of tissue. Light is delivered directly to the affected area using fiber optic devices.
-                    </p>
-                </div>
-                <div>
-                    <h3 data-en="Functional Preservation" data-bn="কার্যকরী সংরক্ষণ">Functional Preservation</h3>
-                    <p data-en="PDT preserves critical anatomical structures and functions. Patients maintain their ability to speak, swallow, and taste normally after treatment."
-                       data-bn="পিডিটি গুরুত্বপূর্ণ শারীরবৃত্তীয় কাঠামো এবং ফাংশন সংরক্ষণ করে। চিকিৎসার পরে রোগীরা তাদের কথা বলা, গিলতে এবং স্বাভাবিকভাবে স্বাদ নেওয়ার ক্ষমতা বজায় রাখে।">
-                        PDT preserves critical anatomical structures and functions. Patients maintain their ability to speak, swallow, and taste normally.
-                    </p>
-                </div>
-                <div>
-                    <h3 data-en="Reduced Side Effects" data-bn="হ্রাস পার্শ্ব প্রতিক্রিয়া">Reduced Side Effects</h3>
-                    <p data-en="Compared to chemotherapy and radiation, PDT has fewer and less severe side effects. Most patients experience only temporary light sensitivity and mild swelling."
-                       data-bn="কেমোথেরাপি এবং রেডিয়েশনের তুলনায়, পিডিটির কম এবং কম গুরুতর পার্শ্ব প্রতিক্রিয়া রয়েছে। বেশিরভাগ রোগী শুধুমাত্র অস্থায়ী আলো সংবেদনশীলতা এবং হালকা ফোলা অনুভব করেন।">
-                        Compared to chemotherapy and radiation, PDT has fewer and less severe side effects.
-                    </p>
+                <div class="content-image" data-animate>
+                    <img src="Pictures/Oral PDT low light.png" alt="Importance of PDT" data-en-alt="Importance of PDT" data-bn-alt="পিডিটির গুরুত্ব">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title" data-en="Ideal Candidates for PDT" data-bn="পিডিটির জন্য আদর্শ প্রার্থী">Ideal Candidates for PDT</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon">✓</div>
-                    <h3 data-en="Early-Stage Cancer" data-bn="প্রাথমিক পর্যায়ের ক্যান্সার">Early-Stage Cancer</h3>
-                    <p data-en="T1N0M0 oral squamous cell carcinoma - small, localized tumors without lymph node involvement"
-                       data-bn="T1N0M0 মৌখিক স্কোয়ামাস সেল কার্সিনোমা - লিম্ফ নোড জড়িততা ছাড়াই ছোট, স্থানীয়কৃত টিউমার">
-                        T1N0M0 oral squamous cell carcinoma - small, localized tumors without lymph node involvement
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">✓</div>
-                    <h3 data-en="Precancerous Lesions" data-bn="প্রাক-ক্যান্সারজনিত ক্ষত">Precancerous Lesions</h3>
-                    <p data-en="Oral leukoplakia, erythroplakia, lichen planus, and verrucous hyperplasia with dysplasia"
-                       data-bn="ডিসপ্লেসিয়া সহ মৌখিক লিউকোপ্লাকিয়া, এরিথ্রোপ্লাকিয়া, লাইকেন প্লানুস এবং ভেরুকাস হাইপারপ্লাসিয়া">
-                        Oral leukoplakia, erythroplakia, lichen planus, and verrucous hyperplasia with dysplasia
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">✓</div>
-                    <h3 data-en="Recurrent Disease" data-bn="পুনরাবৃত্ত রোগ">Recurrent Disease</h3>
-                    <p data-en="Patients with recurrent oral cancer where surgery or radiation is not feasible"
-                       data-bn="পুনরাবৃত্ত মৌখিক ক্যান্সারে আক্রান্ত রোগী যেখানে সার্জারি বা রেডিয়েশন সম্ভবপর নয়">
-                        Patients with recurrent oral cancer where surgery or radiation is not feasible
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">✓</div>
-                    <h3 data-en="Adjuvant Therapy" data-bn="সহায়ক থেরাপি">Adjuvant Therapy</h3>
-                    <p data-en="As complementary treatment following surgery or in combination with other modalities"
-                       data-bn="সার্জারির পরে পরিপূরক চিকিৎসা হিসাবে বা অন্যান্য পদ্ধতির সাথে সমন্বয়ে">
-                        As complementary treatment following surgery or in combination with other modalities
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h3>
-                    <p data-en="Advanced photodynamic therapy for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি">Advanced photodynamic therapy for oral cancer treatment</p>
+                    <p data-en="Advanced photodynamic therapy for oral cancer treatment. Dedicated to providing non-invasive, effective care." 
+                       data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি।">
+                        Advanced photodynamic therapy for oral cancer treatment. Dedicated to providing non-invasive, effective care.
+                    </p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
-                    <ul>
+                    <h4 style="color:white; margin-bottom:1rem;" data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
+                    <ul class="footer-links">
                         <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
                         <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
                         <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
@@ -187,17 +230,34 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 data-en="Contact Info" data-bn="যোগাযোগের তথ্য">Contact Info</h4>
+                    <h4 style="color:white; margin-bottom:1rem;" data-en="Contact Info" data-bn="যোগাযোগের তথ্য">Contact Info</h4>
                     <p>Email: info@pdtcancercenter.com</p>
                     <p>Phone: +880-XXX-XXXXXX</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-en="© 2026 PDT Cancer Center. All rights reserved." data-bn="© ২০২৬ পিডিটি ক্যান্সার সেন্টার। সর্বস্বত্ব সংরক্ষিত।">© 2026 PDT Cancer Center. All rights reserved.</p>
+                <p data-en="© 2026 PDT Cancer Center. All rights reserved." data-bn="© ২০২৬ পিডিটি ক্যান্সার সেন্টার। সর্বস্বত্ব সংরক্ষিত।">
+                    © 2026 PDT Cancer Center. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
 
+    <!-- Article Modal -->
+    <div id="article-modal" class="article-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="modal-title">Article Title</h2>
+                <button class="modal-close" aria-label="Close">&times;</button>
+            </div>
+            <div id="modal-body" class="modal-body">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation JS -->
     <script src="script.js"></script>
 </body>
 </html>
