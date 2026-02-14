@@ -3,46 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="Pictures/PDT logo.png">
-    <title>FAQ | Common Questions About PDT</title>
+    <link rel="icon" type="image/png" href="Pictures/PDT logo.png">
+    <title>FAQ | PDT Cancer Center</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="language-toggle">
-        <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
-        <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
-    </div>
-
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
                 <img src="Pictures/PDT logo.png" alt="PDT Logo" class="nav-logo">
-                <h1 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h1>
+                <span data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</span>
             </div>
+            
+            <div class="language-toggle">
+                <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">BN</button>
+            </div>
+
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
-                <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
-                <li><a href="how-it-works.html" data-en="How It Works" data-bn="কীভাবে কাজ করে">How It Works</a></li>
+                <li><a href="about.html" data-en="About" data-bn="সম্পর্কে">About</a></li>
+                <li><a href="how-it-works.html" data-en="Process" data-bn="পদ্ধতি">Process</a></li>
                 <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
-                <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
-                <li><a href="faq.html" data-en="FAQ" data-bn="প্রশ্নোত্তর">FAQ</a></li>
+                <li><a href="clinic.html" data-en="Clinic" data-bn="ক্লিনিক">Clinic</a></li>
+                <li><a href="faq.html" class="active" data-en="FAQ" data-bn="প্রশ্নোত্তর">FAQ</a></li>
                 <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <section class="hero" style="padding: 80px 20px;">
+    <header class="hero">
+        <div class="hero-slideshow">
+            <div class="slide active" style="background-image: url('Pictures/Curcumin.png')"></div>
+            <div class="slide" style="background-image: url('Pictures/QA.png')"></div>
+            <div class="slide" style="background-image: url('Pictures/FAQ 2.png')"></div>
+        </div>
+        <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1 class="hero-title" data-en="Frequently Asked Questions" data-bn="প্রায়শই জিজ্ঞাসিত প্রশ্ন">Frequently Asked Questions</h1>
-            <p class="hero-subtitle" data-en="Get answers to common questions about PDT" data-bn="পিডিটি সম্পর্কে সাধারণ প্রশ্নের উত্তর পান">Get answers about PDT</p>
+            <p class="hero-subtitle" data-en="Find answers to common questions about Photodynamic Therapy, treatment procedures, and recovery." data-bn="ফটোডাইনামিক থেরাপি, চিকিৎসা পদ্ধতি এবং পুনরুদ্ধার সম্পর্কে সাধারণ প্রশ্নের উত্তর খুঁজুন।">Find answers to common questions about Photodynamic Therapy.</p>
         </div>
-    </section>
+    </header>
 
     <section class="section bg-light">
-        <div class="container">
-            <div class="faq-item">
+        <div class="container" style="max-width: 800px;">
+            <div class="faq-item" data-animate>
                 <button class="faq-question">
                     <span data-en="Is PDT painful?" data-bn="পিডিটি কি বেদনাদায়ক?">Is PDT painful?</span>
                     <span class="faq-icon">▼</span>
@@ -57,7 +72,7 @@
                 </div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item" data-animate>
                 <button class="faq-question">
                     <span data-en="How long does PDT treatment take?" data-bn="পিডিটি চিকিৎসায় কতক্ষণ সময় লাগে?">How long does PDT treatment take?</span>
                     <span class="faq-icon">▼</span>
@@ -72,7 +87,7 @@
                 </div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item" data-animate>
                 <button class="faq-question">
                     <span data-en="What are the side effects of PDT?" data-bn="পিডিটির পার্শ্ব প্রতিক্রিয়া কি?">What are the side effects of PDT?</span>
                     <span class="faq-icon">▼</span>
@@ -87,7 +102,7 @@
                 </div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item" data-animate>
                 <button class="faq-question">
                     <span data-en="How effective is PDT for oral cancer?" data-bn="মৌখিক ক্যান্সারের জন্য পিডিটি কতটা কার্যকর?">How effective is PDT for oral cancer?</span>
                     <span class="faq-icon">▼</span>
@@ -102,7 +117,7 @@
                 </div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item" data-animate>
                 <button class="faq-question">
                     <span data-en="Can PDT be repeated if needed?" data-bn="প্রয়োজনে পিডিটি পুনরাবৃত্তি করা যেতে পারে?">Can PDT be repeated if needed?</span>
                     <span class="faq-icon">▼</span>
@@ -117,7 +132,7 @@
                 </div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item" data-animate>
                 <button class="faq-question">
                     <span data-en="Will PDT affect my ability to speak or eat?" data-bn="পিডিটি কি আমার কথা বলা বা খাওয়ার ক্ষমতাকে প্রভাবিত করবে?">Will PDT affect my ability to speak or eat?</span>
                     <span class="faq-icon">▼</span>
@@ -132,7 +147,7 @@
                 </div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item" data-animate>
                 <button class="faq-question">
                     <span data-en="How much does PDT cost?" data-bn="পিডিটির খরচ কত?">How much does PDT cost?</span>
                     <span class="faq-icon">▼</span>
@@ -149,16 +164,24 @@
         </div>
     </section>
 
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white; margin-bottom: 1.5rem;" data-en="Still have questions?" data-bn="এখনও প্রশ্ন আছে?">Still have questions?</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9); margin-bottom: 2.5rem;" data-en="Our team is here to help you understand if PDT is right for you." data-bn="আমাদের টিম আপনাকে বুঝতে সাহায্য করার জন্য এখানে রয়েছে যে পিডিটি আপনার জন্য সঠিক কিনা।">Our team is here to help you.</p>
+            <a href="contact.html" class="btn btn-secondary" data-en="Contact Us Today" data-bn="আজই আমাদের সাথে যোগাযোগ করুন">Contact Us Today</a>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h3>
-                    <p data-en="Advanced photodynamic therapy for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি">Advanced photodynamic therapy</p>
+                    <p data-en="Advanced photodynamic therapy for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি">Advanced photodynamic therapy for oral cancer treatment</p>
                 </div>
                 <div class="footer-section">
                     <h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
-                    <ul>
+                    <ul class="footer-links">
                         <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
                         <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
                         <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
