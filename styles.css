@@ -1056,7 +1056,7 @@ h1, h2, h3, h4, h5, h6 {
 
     /* Adjust the image stack height for mobile to prevent vertical stretching */
     .image-stack {
-        height: 250px;
+        height: 240px;
     }
 
     .footer-content {
