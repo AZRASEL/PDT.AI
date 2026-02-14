@@ -3,88 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="Pictures/PDT logo.png">
-    <title>Contact Us | Schedule PDT Consultation</title>
+    <link rel="icon" type="image/png" href="Pictures/PDT logo.png">
+    <title>Contact Us | PDT Cancer Center</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="language-toggle">
-        <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
-        <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
-    </div>
-
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
                 <img src="Pictures/PDT logo.png" alt="PDT Logo" class="nav-logo">
-                <h1 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h1>
+                <span data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</span>
             </div>
+            
+            <div class="language-toggle">
+                <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">BN</button>
+            </div>
+
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
-                <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
-                <li><a href="how-it-works.html" data-en="How It Works" data-bn="কীভাবে কাজ করে">How It Works</a></li>
+                <li><a href="about.html" data-en="About" data-bn="সম্পর্কে">About</a></li>
+                <li><a href="how-it-works.html" data-en="Process" data-bn="পদ্ধতি">Process</a></li>
                 <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
-                <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
+                <li><a href="clinic.html" data-en="Clinic" data-bn="ক্লিনিক">Clinic</a></li>
                 <li><a href="faq.html" data-en="FAQ" data-bn="প্রশ্নোত্তর">FAQ</a></li>
-                <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
+                <li><a href="contact.html" class="active" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <section class="hero" style="padding: 80px 20px;">
+    <header class="hero">
+        <div class="hero-slideshow">
+            <div class="slide active" style="background-image: url('Pictures/Contact 2.png')"></div>
+            <div class="slide" style="background-image: url('Pictures/Contact 1.png')"></div>
+            <div class="slide" style="background-image: url('Pictures/QA 3.png')"></div>
+        </div>
+        <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1 class="hero-title" data-en="Contact Us" data-bn="যোগাযোগ করুন">Contact Us</h1>
-            <p class="hero-subtitle" data-en="Schedule your PDT consultation today" data-bn="আজই আপনার পিডিটি পরামর্শ নির্ধারণ করুন">Schedule your consultation today</p>
+            <p class="hero-subtitle" data-en="Schedule your PDT consultation today. Our team is ready to assist you." data-bn="আজই আপনার পিডিটি পরামর্শ নির্ধারণ করুন। আমাদের দল আপনাকে সহায়তা করতে প্রস্তুত।">Schedule your consultation today.</p>
         </div>
-    </section>
+    </header>
 
     <section class="section bg-light">
         <div class="container">
-            <h2 class="section-title" data-en="Get in Touch" data-bn="যোগাযোগ করুন">Get in Touch</h2>
-            
-            <form class="contact-form" id="contact-form">
-                <div class="form-group">
-                    <label for="name" data-en="Full Name *" data-bn="পূর্ণ নাম *">Full Name *</label>
-                    <input type="text" id="name" name="name" required 
-                           data-en placeholder="Enter your full name"
-                           data-bn placeholder="আপনার পূর্ণ নাম লিখুন">
-                </div>
+            <div class="contact-wrapper" data-animate>
+                <h2 class="section-title" style="margin-bottom: 2rem;" data-en="Get in Touch" data-bn="যোগাযোগ করুন">Get in Touch</h2>
                 
-                <div class="form-group">
-                    <label for="email" data-en="Email Address *" data-bn="ইমেইল ঠিকানা *">Email Address *</label>
-                    <input type="email" id="email" name="email" required 
-                           data-en placeholder="your.email@example.com"
-                           data-bn placeholder="আপনার.ইমেইল@উদাহরণ.com">
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone" data-en="Phone Number *" data-bn="ফোন নম্বর *">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" required 
-                           data-en placeholder="+880-XXX-XXXXXX"
-                           data-bn placeholder="+৮৮০-XXX-XXXXXX">
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject" data-en="Subject" data-bn="বিষয়">Subject</label>
-                    <select id="subject" name="subject">
-                        <option value="consultation" data-en="Request Consultation" data-bn="পরামর্শ অনুরোধ">Request Consultation</option>
-                        <option value="information" data-en="General Information" data-bn="সাধারণ তথ্য">General Information</option>
-                        <option value="appointment" data-en="Schedule Appointment" data-bn="অ্যাপয়েন্টমেন্ট নির্ধারণ">Schedule Appointment</option>
-                        <option value="other" data-en="Other" data-bn="অন্যান্য">Other</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message" data-en="Message *" data-bn="বার্তা *">Message *</label>
-                    <textarea id="message" name="message" required 
-                              data-en placeholder="Tell us about your condition and questions..."
-                              data-bn placeholder="আপনার অবস্থা এবং প্রশ্ন সম্পর্কে আমাদের বলুন..."></textarea>
-                </div>
-                
-                <button type="submit" data-en="Send Message" data-bn="বার্তা পাঠান">Send Message</button>
-            </form>
+                <form class="contact-form" id="contact-form">
+                    <div class="grid-2" style="gap: 1.5rem; margin-bottom: 1.5rem; align-items: start;">
+                        <div class="form-group">
+                            <label for="name" data-en="Full Name *" data-bn="পূর্ণ নাম *">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" required 
+                                   data-en="Enter your full name"
+                                   data-bn="আপনার পূর্ণ নাম লিখুন"
+                                   placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-en="Email Address *" data-bn="ইমেইল ঠিকানা *">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required 
+                                   data-en="your.email@example.com"
+                                   data-bn="আপনার.ইমেইল@উদাহরণ.com"
+                                   placeholder="your.email@example.com">
+                        </div>
+                    </div>
+
+                    <div class="grid-2" style="gap: 1.5rem; margin-bottom: 1.5rem; align-items: start;">
+                        <div class="form-group">
+                            <label for="phone" data-en="Phone Number *" data-bn="ফোন নম্বর *">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required 
+                                   data-en="+880-XXX-XXXXXX"
+                                   data-bn="+৮৮০-XXX-XXXXXX"
+                                   placeholder="+880-XXX-XXXXXX">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" data-en="Subject" data-bn="বিষয়">Subject</label>
+                            <select id="subject" name="subject" class="form-control">
+                                <option value="consultation" data-en="Request Consultation" data-bn="পরামর্শ অনুরোধ">Request Consultation</option>
+                                <option value="information" data-en="General Information" data-bn="সাধারণ তথ্য">General Information</option>
+                                <option value="appointment" data-en="Schedule Appointment" data-bn="অ্যাপয়েন্টমেন্ট নির্ধারণ">Schedule Appointment</option>
+                                <option value="other" data-en="Other" data-bn="অন্যান্য">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" data-en="Message *" data-bn="বার্তা *">Message *</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required 
+                                  data-en="Tell us about your condition and questions..."
+                                  data-bn="আপনার অবস্থা এবং প্রশ্ন সম্পর্কে আমাদের বলুন..."
+                                  placeholder="Tell us about your condition and questions..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;" data-en="Send Message" data-bn="বার্তা পাঠান">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -92,30 +117,30 @@
         <div class="container">
             <h2 class="section-title" data-en="Our Contact Information" data-bn="আমাদের যোগাযোগের তথ্য">Our Contact Information</h2>
             
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon">📧</div>
+            <div class="grid-4">
+                <div class="card" data-animate style="text-align: center;">
+                    <div class="card-icon" style="margin: 0 auto 1.5rem;">📧</div>
                     <h3 data-en="Email" data-bn="ইমেইল">Email</h3>
                     <p>info@pdtcancercenter.com</p>
                     <p>appointments@pdtcancercenter.com</p>
                 </div>
                 
-                <div class="card">
-                    <div class="card-icon">📞</div>
+                <div class="card" data-animate style="transition-delay: 0.1s; text-align: center;">
+                    <div class="card-icon" style="margin: 0 auto 1.5rem;">📞</div>
                     <h3 data-en="Phone" data-bn="ফোন">Phone</h3>
                     <p data-en="Main: +880-XXX-XXXXXX" data-bn="প্রধান: +৮৮০-XXX-XXXXXX">Main: +880-XXX-XXXXXX</p>
                     <p data-en="Emergency: +880-XXX-XXXXXX" data-bn="জরুরী: +৮৮০-XXX-XXXXXX">Emergency: +880-XXX-XXXXXX</p>
                 </div>
                 
-                <div class="card">
-                    <div class="card-icon">🕐</div>
+                <div class="card" data-animate style="transition-delay: 0.2s; text-align: center;">
+                    <div class="card-icon" style="margin: 0 auto 1.5rem;">🕐</div>
                     <h3 data-en="Hours" data-bn="ঘন্টা">Hours</h3>
-                    <p data-en="Monday - Friday: 9 AM - 6 PM" data-bn="সোমবার - শুক্রবার: সকাল ৯টা - সন্ধ্যা ৬টা">Monday - Friday: 9 AM - 6 PM</p>
-                    <p data-en="Saturday: 9 AM - 2 PM" data-bn="শনিবার: সকাল ৯টা - দুপুর ২টা">Saturday: 9 AM - 2 PM</p>
+                    <p data-en="Monday - Friday: 9 AM - 6 PM" data-bn="সোমবার - শুক্রবার: সকাল ৯টা - সন্ধ্যা ৬টা">Mon - Fri: 9 AM - 6 PM</p>
+                    <p data-en="Saturday: 9 AM - 2 PM" data-bn="শনিবার: সকাল ৯টা - দুপুর ২টা">Sat: 9 AM - 2 PM</p>
                 </div>
                 
-                <div class="card">
-                    <div class="card-icon">📍</div>
+                <div class="card" data-animate style="transition-delay: 0.3s; text-align: center;">
+                    <div class="card-icon" style="margin: 0 auto 1.5rem;">📍</div>
                     <h3 data-en="Location" data-bn="অবস্থান">Location</h3>
                     <p data-en="123 Medical Center Road" data-bn="১২৩ মেডিকেল সেন্টার রোড">123 Medical Center Road</p>
                     <p data-en="Dhaka, Bangladesh" data-bn="ঢাকা, বাংলাদেশ">Dhaka, Bangladesh</p>
@@ -129,11 +154,11 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h3>
-                    <p data-en="Advanced photodynamic therapy for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি">Advanced photodynamic therapy</p>
+                    <p data-en="Advanced photodynamic therapy for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি">Advanced photodynamic therapy for oral cancer treatment</p>
                 </div>
                 <div class="footer-section">
                     <h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
-                    <ul>
+                    <ul class="footer-links">
                         <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
                         <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
                         <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
