@@ -3,149 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="Pictures/PDT logo.png">
+    <link rel="icon" type="image/png" href="Pictures/PDT logo.png">
     <title>Research & Clinical Trials | PDT Evidence</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="language-toggle">
-        <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
-        <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
-    </div>
-
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
                 <img src="Pictures/PDT logo.png" alt="PDT Logo" class="nav-logo">
-                <h1 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h1>
+                <span data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</span>
             </div>
+            
+            <div class="language-toggle">
+                <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">BN</button>
+            </div>
+
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
-                <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
-                <li><a href="how-it-works.html" data-en="How It Works" data-bn="কীভাবে কাজ করে">How It Works</a></li>
-                <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
-                <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
+                <li><a href="about.html" data-en="About" data-bn="সম্পর্কে">About</a></li>
+                <li><a href="how-it-works.html" data-en="Process" data-bn="পদ্ধতি">Process</a></li>
+                <li><a href="research.html" class="active" data-en="Research" data-bn="গবেষণা">Research</a></li>
+                <li><a href="clinic.html" data-en="Clinic" data-bn="ক্লিনিক">Clinic</a></li>
                 <li><a href="faq.html" data-en="FAQ" data-bn="প্রশ্নোত্তর">FAQ</a></li>
                 <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <section class="hero" style="padding: 80px 20px;">
-        <div class="container hero-content">
-            <h1 class="hero-title" data-en="Clinical Research & Evidence" data-bn="ক্লিনিকাল গবেষণা এবং প্রমাণ">Clinical Research & Evidence</h1>
-            <p class="hero-subtitle" data-en="Scientific validation of PDT effectiveness" data-bn="পিডিটি কার্যকারিতার বৈজ্ঞানিক যাচাইকরণ">Scientific validation of PDT effectiveness</p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-slideshow">
+            <div class="slide active" style="background-image: url('Pictures/Research 1.png')"></div>
+            <div class="slide" style="background-image: url('Pictures/Research 2.png')"></div>
+            <div class="slide" style="background-image: url('Pictures/PDT visualization 1.png')"></div>
         </div>
-    </section>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title" data-en="Clinical Research & Evidence" data-bn="ক্লিনিকাল গবেষণা এবং প্রমাণ" data-animate>Clinical Research & Evidence</h1>
+            <p class="hero-subtitle" data-en="Scientific validation of PDT effectiveness" data-bn="পিডিটি কার্যকারিতার বৈজ্ঞানিক যাচাইকরণ" data-animate>Scientific validation of PDT effectiveness</p>
+        </div>
+    </header>
 
+    <!-- Research Journey Section -->
     <section class="section bg-light">
         <div class="container">
-            <h2 class="section-title" data-en="Groundbreaking India Clinical Trial" data-bn="যুগান্তকারী ভারত ক্লিনিকাল ট্রায়াল">Groundbreaking India Clinical Trial</h2>
-            
-            <div class="research-card">
-                <h3 data-en="Low-Cost PDT System for Early Oral Cancer (2022)" data-bn="প্রাথমিক মৌখিক ক্যান্সারের জন্য স্বল্প-মূল্যের পিডিটি সিস্টেম (২০২২)">Low-Cost PDT System for Early Oral Cancer (2022)</h3>
-                <p class="source" data-en="Published: Photodiagnosis and Photodynamic Therapy, JN Medical College, Aligarh, India" 
-                   data-bn="প্রকাশিত: ফটোডায়াগনোসিস অ্যান্ড ফটোডাইনামিক থেরাপি, জেএন মেডিকেল কলেজ, আলীগড়, ভারত">
-                    Published: Photodiagnosis and Photodynamic Therapy, JN Medical College, Aligarh, India
-                </p>
-                
-                <div class="highlight">
-                    <h4 data-en="Study Highlights:" data-bn="গবেষণা হাইলাইট:">Study Highlights:</h4>
-                    <ul>
-                        <li data-en="30 patients with T1N0M0 buccal mucosal cancer treated successfully" 
-                            data-bn="T1N0M0 বুক্কাল মিউকোসাল ক্যান্সারে আক্রান্ত 30 জন রোগী সফলভাবে চিকিৎসা করা হয়েছে">
-                            30 patients with T1N0M0 buccal mucosal cancer treated successfully
-                        </li>
-                        <li data-en="Portable, battery-powered LED system at 635nm wavelength" 
-                            data-bn="635nm তরঙ্গদৈর্ঘ্যে পোর্টেবল, ব্যাটারি চালিত LED সিস্টেম">
-                            Portable, battery-powered LED system at 635nm wavelength
-                        </li>
-                        <li data-en="Smartphone-based fluorescence imaging for treatment guidance" 
-                            data-bn="চিকিৎসা নির্দেশনার জন্য স্মার্টফোন-ভিত্তিক ফ্লুরোসেন্স ইমেজিং">
-                            Smartphone-based fluorescence imaging for treatment guidance
-                        </li>
-                        <li data-en="Reached rural patients up to 200 km from the medical center" 
-                            data-bn="মেডিকেল সেন্টার থেকে 200 কিলোমিটার পর্যন্ত গ্রামীণ রোগীদের কাছে পৌঁছেছে">
-                            Reached rural patients up to 200 km from medical center
-                        </li>
-                        <li data-en="Complete tumor response with photobleaching correlation" 
-                            data-bn="ফটোব্লিচিং সম্পর্কের সাথে সম্পূর্ণ টিউমার প্রতিক্রিয়া">
-                            Complete tumor response with photobleaching correlation
-                        </li>
-                    </ul>
-                </div>
-                
-                <p data-en="This study demonstrated that low-cost, portable PDT technology can effectively treat early-stage oral cancer in resource-limited settings. The trial showed excellent outcomes with complete tumor response and minimal side effects, making PDT accessible to underserved populations in India where oral cancer rates are among the highest globally."
-                   data-bn="এই গবেষণা প্রদর্শন করেছে যে স্বল্প-মূল্যের, পোর্টেবল পিডিটি প্রযুক্তি সম্পদ-সীমিত সেটিংসে প্রাথমিক পর্যায়ের মৌখিক ক্যান্সারের কার্যকরভাবে চিকিৎসা করতে পারে। ট্রায়ালটি সম্পূর্ণ টিউমার প্রতিক্রিয়া এবং ন্যূনতম পার্শ্ব প্রতিক্রিয়া সহ চমৎকার ফলাফল দেখিয়েছে, ভারতে অবহেলিত জনসংখ্যার জন্য পিডিটি অ্যাক্সেসযোগ্য করে তুলেছে যেখানে মৌখিক ক্যান্সার হার বিশ্বব্যাপী সর্বোচ্চ।">
-                    This study demonstrated that low-cost, portable PDT can effectively treat early oral cancer in resource-limited settings, making treatment accessible to underserved populations.
-                </p>
-                <div style="margin-top: 15px;">
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/35367616/" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; color: var(--primary-color); font-weight: 600; text-decoration: none;" data-en="Read Full Article &rarr;" data-bn="সম্পূর্ণ নিবন্ধ পড়ুন &rarr;">Read Full Article &rarr;</a>
-                </div>
-            </div>
+            <div class="grid-2 research-layout">
+                <!-- Left Column: Lab Work & Journey -->
+                <div class="lab-journey" data-animate>
+                    <h2 class="section-title" style="text-align: left; left: 0; transform: none; margin-bottom: 2rem;" data-en="Our Research Journey" data-bn="আমাদের গবেষণার যাত্রা">Our Research Journey</h2>
+                    
+                    <div class="journey-step">
+                        <div class="journey-image">
+                            <img src="Pictures/Research 1.png" alt="Hydrogel and Benchtop Testing" data-en-alt="Hydrogel and Benchtop Testing" data-bn-alt="হাইড্রোজেল এবং বেঞ্চটপ টেস্টিং">
+                        </div>
+                        <div class="journey-text">
+                            <h3 data-en="Step 1: Lab & Benchtop Testing" data-bn="ধাপ ১: ল্যাব এবং বেঞ্চটপ টেস্টিং">Step 1: Lab & Benchtop Testing</h3>
+                            <p data-en="Our journey began with rigorous hydrogel testing using advanced benchtop setups. This foundational stage allowed us to perfect the drug delivery mechanism and light activation parameters." 
+                               data-bn="আমাদের যাত্রা শুরু হয়েছিল উন্নত বেঞ্চটপ সেটআপ ব্যবহার করে কঠোর হাইড্রোজেল পরীক্ষার মাধ্যমে। এই প্রাথমিক পর্যায়টি আমাদের ড্রাগ ডেলিভারি মেকানিজম এবং লাইট অ্যাক্টিভেশন প্যারামিটারগুলি নিখুঁত করতে সাহায্য করেছে।">
+                                Our journey began with rigorous hydrogel testing using advanced benchtop setups to perfect drug delivery.
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="research-card">
-                <h3 data-en="Meta-Analysis of PDT for Oral Precancerous Lesions" data-bn="মৌখিক প্রাক-ক্যান্সারজনিত ক্ষতের জন্য পিডিটির মেটা-বিশ্লেষণ">Meta-Analysis of PDT for Oral Precancerous Lesions</h3>
-                <p class="source" data-en="Multiple studies analyzed through 2021" data-bn="2021 পর্যন্ত একাধিক গবেষণা বিশ্লেষণ করা হয়েছে">Multiple studies analyzed through 2021</p>
-                
-                <div class="highlight">
-                    <h4 data-en="Key Findings:" data-bn="মূল অনুসন্ধান:">Key Findings:</h4>
-                    <ul>
-                        <li data-en="Overall complete response rate: 52% (CI: 0.36-0.68)" data-bn="সামগ্রিক সম্পূর্ণ প্রতিক্রিয়া হার: 52% (CI: 0.36-0.68)">Overall complete response rate: 52% (CI: 0.36-0.68)</li>
-                        <li data-en="Partial response rate: 82% (CI: 0.74-0.88)" data-bn="আংশিক প্রতিক্রিয়া হার: 82% (CI: 0.74-0.88)">Partial response rate: 82% (CI: 0.74-0.88)</li>
-                        <li data-en="20% ALA showed 68% complete response - most effective concentration" data-bn="20% ALA 68% সম্পূর্ণ প্রতিক্রিয়া দেখিয়েছে - সবচেয়ে কার্যকর ঘনত্ব">20% ALA showed 68% complete response - most effective</li>
-                        <li data-en="Lesion size decreased by average 1.38 cm² after PDT" data-bn="পিডিটির পরে গড়ে 1.38 cm² ক্ষত আকার হ্রাস পেয়েছে">Lesion size decreased by average 1.38 cm² after PDT</li>
-                    </ul>
-                </div>
-                <div style="margin-top: 15px;">
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/31394296/" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; color: var(--primary-color); font-weight: 600; text-decoration: none;" data-en="Read Full Article &rarr;" data-bn="সম্পূর্ণ নিবন্ধ পড়ুন &rarr;">Read Full Article &rarr;</a>
-                </div>
-            </div>
+                    <div class="journey-step">
+                        <div class="journey-image">
+                            <img src="Pictures/Research 2.png" alt="Prototypes and Animal Trials" data-en-alt="Prototypes and Animal Trials" data-bn-alt="প্রোটোটাইপ এবং প্রাণী ট্রায়াল">
+                        </div>
+                        <div class="journey-text">
+                            <h3 data-en="Step 2: Prototype & Animal Trials" data-bn="ধাপ ২: প্রোটোটাইপ এবং প্রাণী ট্রায়াল">Step 2: Prototype & Animal Trials</h3>
+                            <p data-en="Following successful lab tests, we developed functional prototypes and conducted extensive animal trials. This crucial phase validated the safety and biological efficacy of our PDT system." 
+                               data-bn="সফল ল্যাব পরীক্ষার পর, আমরা কার্যকরী প্রোটোটাইপ তৈরি করেছি এবং ব্যাপক প্রাণী ট্রায়াল পরিচালনা করেছি। এই গুরুত্বপূর্ণ পর্যায়টি আমাদের পিডিটি সিস্টেমের নিরাপত্তা এবং জৈবিক কার্যকারিতা যাচাই করেছে।">
+                                Following lab success, we developed prototypes and conducted trials to validate safety and efficacy.
+                            </p>
+                        </div>
+                    </div>
 
-            <div class="research-card">
-                <h3 data-en="Advanced Oral Cancer Treatment Success" data-bn="উন্নত মৌখিক ক্যান্সার চিকিৎসা সাফল্য">Advanced Oral Cancer Treatment Success</h3>
-                <p class="source" data-en="Lambert et al., Clinical studies" data-bn="ল্যাম্বার্ট এট আল।, ক্লিনিকাল গবেষণা">Lambert et al., Clinical studies</p>
-                
-                <div class="highlight">
-                    <p data-en="In patients with advanced oral cancer who refused or were unsuitable for conventional treatments:" 
-                       data-bn="উন্নত মৌখিক ক্যান্সারে আক্রান্ত রোগীদের মধ্যে যারা প্রচলিত চিকিৎসা প্রত্যাখ্যান করেছিলেন বা অনুপযুক্ত ছিলেন:">
-                        In patients with advanced oral cancer who refused or were unsuitable for conventional treatments:
-                    </p>
-                    <ul>
-                        <li data-en="76.9% achieved complete response" data-bn="76.9% সম্পূর্ণ প্রতিক্রিয়া অর্জন করেছে">76.9% achieved complete response</li>
-                        <li data-en="42.3% achieved local tumor control" data-bn="42.3% স্থানীয় টিউমার নিয়ন্ত্রণ অর্জন করেছে">42.3% achieved local tumor control</li>
-                        <li data-en="PDT used as palliative treatment with excellent outcomes" data-bn="চমৎকার ফলাফল সহ প্যালিয়েটিভ চিকিৎসা হিসাবে পিডিটি ব্যবহৃত">PDT used as palliative treatment with excellent outcomes</li>
-                    </ul>
+                    <div class="journey-step">
+                        <div class="journey-image">
+                            <img src="Pictures/PDT visualization 1.png" alt="Clinical Application" data-en-alt="Clinical Application" data-bn-alt="ক্লিনিকাল অ্যাপ্লিকেশন">
+                        </div>
+                        <div class="journey-text">
+                            <h3 data-en="Step 3: Clinical Application" data-bn="ধাপ ৩: ক্লিনিকাল অ্যাপ্লিকেশন">Step 3: Clinical Application</h3>
+                            <p data-en="After obtaining IRB and clinical trial permissions, and achieving positive results, we received approval from government authorities for actual clinical application in treating oral cancer." 
+                               data-bn="IRB এবং ক্লিনিকাল ট্রায়াল অনুমতি পাওয়ার পরে, এবং ইতিবাচক ফলাফল অর্জনের পরে, আমরা মৌখিক ক্যান্সারের চিকিৎসায় প্রকৃত ক্লিনিকাল প্রয়োগের জন্য সরকারি কর্তৃপক্ষের অনুমোদন পেয়েছি।">
+                                After IRB approval and positive trial results, we received government clearance for actual clinical use.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div style="margin-top: 15px;">
-                    <a href="https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2021.626394/full" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; color: var(--primary-color); font-weight: 600; text-decoration: none;" data-en="Read Full Article &rarr;" data-bn="সম্পূর্ণ নিবন্ধ পড়ুন &rarr;">Read Full Article &rarr;</a>
+
+                <!-- Right Column: Clinical Trials -->
+                <div class="clinical-articles">
+                    <h2 class="section-title" style="text-align: left; left: 0; transform: none; margin-bottom: 2rem;" data-en="Groundbreaking Clinical Trial" data-bn="যুগান্তকারী ক্লিনিকাল ট্রায়াল">Groundbreaking Clinical Trial</h2>
+                    
+                    <div class="card" style="margin-bottom: 2rem;" data-animate>
+                        <h3 data-en="Low-Cost PDT System for Early Oral Cancer (2022)" data-bn="প্রাথমিক মৌখিক ক্যান্সারের জন্য স্বল্প-মূল্যের পিডিটি সিস্টেম (২০২২)">Low-Cost PDT System for Early Oral Cancer (2022)</h3>
+                        <p style="color: var(--text-light); font-style: italic; margin-bottom: 1rem;" data-en="Published: Photodiagnosis and Photodynamic Therapy, JN Medical College, Aligarh, India" 
+                           data-bn="প্রকাশিত: ফটোডায়াগনোসিস অ্যান্ড ফটোডাইনামিক থেরাপি, জেএন মেডিকেল কলেজ, আলীগড়, ভারত">
+                            Published: Photodiagnosis and Photodynamic Therapy, JN Medical College, Aligarh, India
+                        </p>
+                        
+                        <div style="background: rgba(14, 165, 233, 0.1); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1rem;">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--primary-color);" data-en="Study Highlights:" data-bn="গবেষণা হাইলাইট:">Study Highlights:</h4>
+                            <ul class="feature-list">
+                                <li data-en="30 patients with T1N0M0 buccal mucosal cancer treated successfully" 
+                                    data-bn="T1N0M0 বুক্কাল মিউকোসাল ক্যান্সারে আক্রান্ত 30 জন রোগী সফলভাবে চিকিৎসা করা হয়েছে">
+                                    30 patients with T1N0M0 buccal mucosal cancer treated successfully
+                                </li>
+                                <li data-en="Portable, battery-powered LED system at 635nm wavelength" 
+                                    data-bn="635nm তরঙ্গদৈর্ঘ্যে পোর্টেবল, ব্যাটারি চালিত LED সিস্টেম">
+                                    Portable, battery-powered LED system at 635nm wavelength
+                                </li>
+                                <li data-en="Smartphone-based fluorescence imaging for treatment guidance" 
+                                    data-bn="চিকিৎসা নির্দেশনার জন্য স্মার্টফোন-ভিত্তিক ফ্লুরোসেন্স ইমেজিং">
+                                    Smartphone-based fluorescence imaging for treatment guidance
+                                </li>
+                                <li data-en="Reached rural patients up to 200 km from the medical center" 
+                                    data-bn="মেডিকেল সেন্টার থেকে 200 কিলোমিটার পর্যন্ত গ্রামীণ রোগীদের কাছে পৌঁছেছে">
+                                    Reached rural patients up to 200 km from medical center
+                                </li>
+                                <li data-en="Complete tumor response with photobleaching correlation" 
+                                    data-bn="ফটোব্লিচিং সম্পর্কের সাথে সম্পূর্ণ টিউমার প্রতিক্রিয়া">
+                                    Complete tumor response with photobleaching correlation
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <p data-en="This study demonstrated that low-cost, portable PDT technology can effectively treat early-stage oral cancer in resource-limited settings. The trial showed excellent outcomes with complete tumor response and minimal side effects, making PDT accessible to underserved populations."
+                           data-bn="এই গবেষণা প্রদর্শন করেছে যে স্বল্প-মূল্যের, পোর্টেবল পিডিটি প্রযুক্তি সম্পদ-সীমিত সেটিংসে প্রাথমিক পর্যায়ের মৌখিক ক্যান্সারের কার্যকরভাবে চিকিৎসা করতে পারে। ট্রায়ালটি সম্পূর্ণ টিউমার প্রতিক্রিয়া এবং ন্যূনতম পার্শ্ব প্রতিক্রিয়া সহ চমৎকার ফলাফল দেখিয়েছে।">
+                            This study demonstrated that low-cost, portable PDT can effectively treat early oral cancer in resource-limited settings.
+                        </p>
+                        <div style="margin-top: 15px;">
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/35367616/" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; color: var(--secondary-color); font-weight: 600; text-decoration: none;" data-en="Read Full Article &rarr;" data-bn="সম্পূর্ণ নিবন্ধ পড়ুন &rarr;">Read Full Article &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 2rem;" data-animate>
+                        <h3 data-en="Meta-Analysis of PDT for Oral Precancerous Lesions" data-bn="মৌখিক প্রাক-ক্যান্সারজনিত ক্ষতের জন্য পিডিটির মেটা-বিশ্লেষণ">Meta-Analysis of PDT for Oral Precancerous Lesions</h3>
+                        <p style="color: var(--text-light); font-style: italic; margin-bottom: 1rem;" data-en="Multiple studies analyzed through 2021" data-bn="2021 পর্যন্ত একাধিক গবেষণা বিশ্লেষণ করা হয়েছে">Multiple studies analyzed through 2021</p>
+                        
+                        <div style="background: rgba(14, 165, 233, 0.1); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1rem;">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--primary-color);" data-en="Key Findings:" data-bn="মূল অনুসন্ধান:">Key Findings:</h4>
+                            <ul class="feature-list">
+                                <li data-en="Overall complete response rate: 52% (CI: 0.36-0.68)" data-bn="সামগ্রিক সম্পূর্ণ প্রতিক্রিয়া হার: 52% (CI: 0.36-0.68)">Overall complete response rate: 52%</li>
+                                <li data-en="Partial response rate: 82% (CI: 0.74-0.88)" data-bn="আংশিক প্রতিক্রিয়া হার: 82% (CI: 0.74-0.88)">Partial response rate: 82%</li>
+                                <li data-en="20% ALA showed 68% complete response - most effective concentration" data-bn="20% ALA 68% সম্পূর্ণ প্রতিক্রিয়া দেখিয়েছে - সবচেয়ে কার্যকর ঘনত্ব">20% ALA showed 68% complete response</li>
+                                <li data-en="Lesion size decreased by average 1.38 cm² after PDT" data-bn="পিডিটির পরে গড়ে 1.38 cm² ক্ষত আকার হ্রাস পেয়েছে">Lesion size decreased by average 1.38 cm²</li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/31394296/" target="_blank" style="display: inline-flex; align-items: center; gap: 5px; color: var(--secondary-color); font-weight: 600; text-decoration: none;" data-en="Read Full Article &rarr;" data-bn="সম্পূর্ণ নিবন্ধ পড়ুন &rarr;">Read Full Article &rarr;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Global Research -->
     <section class="section">
         <div class="container">
             <h2 class="section-title" data-en="Global PDT Research" data-bn="বৈশ্বিক পিডিটি গবেষণা">Global PDT Research</h2>
             
-            <div class="cards-grid">
-                <div class="card">
+            <div class="grid-3">
+                <div class="card" data-animate>
+                    <div class="card-icon">🇺🇸</div>
                     <h3 data-en="USA Research" data-bn="মার্কিন গবেষণা">USA Research</h3>
                     <p data-en="National Cancer Institute (NCI) funded studies on photoimmunotherapy combining PDT with immunotherapy for head and neck cancers, showing promise in activating immune responses."
                        data-bn="ন্যাশনাল ক্যান্সার ইনস্টিটিউট (NCI) মাথা এবং ঘাড়ের ক্যান্সারের জন্য ইমিউনোথেরাপির সাথে পিডিটি একত্রিত করে ফটোইমিউনোথেরাপিতে অর্থায়িত গবেষণা, ইমিউন প্রতিক্রিয়া সক্রিয় করার প্রতিশ্রুতি দেখাচ্ছে।">
                         NCI-funded studies on photoimmunotherapy combining PDT with immunotherapy showing promise in activating immune responses.
                     </p>
                 </div>
-                <div class="card">
+                <div class="card" data-animate>
+                    <div class="card-icon">🇪🇺</div>
                     <h3 data-en="European Studies" data-bn="ইউরোপীয় গবেষণা">European Studies</h3>
                     <p data-en="Extensive research in UK, Germany, and Portugal on second-generation photosensitizers with improved tissue penetration and reduced photosensitivity periods."
                        data-bn="উন্নত টিস্যু অনুপ্রবেশ এবং হ্রাস ফটোসেন্সিটিভিটি সময়কাল সহ দ্বিতীয় প্রজন্মের ফটোসেন্সিটাইজারগুলিতে যুক্তরাজ্য, জার্মানি এবং পর্তুগালে বিস্তৃত গবেষণা।">
                         Research in UK, Germany, and Portugal on improved photosensitizers with better tissue penetration.
                     </p>
                 </div>
-                <div class="card">
+                <div class="card" data-animate>
+                    <div class="card-icon">🇨🇳</div>
                     <h3 data-en="Asian Innovations" data-bn="এশিয়ান উদ্ভাবন">Asian Innovations</h3>
                     <p data-en="Taiwan and China pioneering topical 5-ALA protocols for oral verrucous hyperplasia and leukoplakia with minimal side effects and excellent cosmetic outcomes."
                        data-bn="তাইওয়ান এবং চীন ন্যূনতম পার্শ্ব প্রতিক্রিয়া এবং চমৎকার কসমেটিক ফলাফলের সাথে মৌখিক ভেরুকাস হাইপারপ্লাসিয়া এবং লিউকোপ্লাকিয়ার জন্য টপিক্যাল 5-ALA প্রোটোকল অগ্রগামী।">
@@ -156,29 +206,36 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h3>
-                    <p data-en="Advanced photodynamic therapy for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি">Advanced photodynamic therapy</p>
+                    <p data-en="Advanced photodynamic therapy for oral cancer treatment. Dedicated to providing non-invasive, effective care." 
+                       data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি।">
+                        Advanced photodynamic therapy for oral cancer treatment. Dedicated to providing non-invasive, effective care.
+                    </p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
-                    <ul>
+                    <h4 style="color:white; margin-bottom:1rem;" data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
+                    <ul class="footer-links">
                         <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
                         <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
+                        <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
                         <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 data-en="Contact Info" data-bn="যোগাযোগের তথ্য">Contact Info</h4>
+                    <h4 style="color:white; margin-bottom:1rem;" data-en="Contact Info" data-bn="যোগাযোগের তথ্য">Contact Info</h4>
                     <p>Email: info@pdtcancercenter.com</p>
                     <p>Phone: +880-XXX-XXXXXX</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-en="© 2026 PDT Cancer Center. All rights reserved." data-bn="© ২০২৬ পিডিটি ক্যান্সার সেন্টার। সর্বস্বত্ব সংরক্ষিত।">© 2026 PDT Cancer Center. All rights reserved.</p>
+                <p data-en="© 2026 PDT Cancer Center. All rights reserved." data-bn="© ২০২৬ পিডিটি ক্যান্সার সেন্টার। সর্বস্বত্ব সংরক্ষিত।">
+                    © 2026 PDT Cancer Center. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
