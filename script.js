@@ -9,7 +9,8 @@ function setLanguage(lang) {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active');
     });
-    document.getElementById(`lang-${lang}`).classList.add('active');
+    const activeBtn = document.getElementById(`lang-${lang}`);
+    if (activeBtn) activeBtn.classList.add('active');
     
     // Update all translatable elements
     document.querySelectorAll('[data-en]').forEach(element => {
@@ -22,6 +23,28 @@ function setLanguage(lang) {
             }
         }
     });
+
+    // Update images alt text
+    document.querySelectorAll('img[data-en-alt]').forEach(img => {
+        const altText = img.getAttribute(`data-${lang}-alt`);
+        if (altText) {
+            img.alt = altText;
+        }
+    });
+
+    // Update active modal content if open
+    const modal = document.getElementById('article-modal');
+    if (modal && modal.classList.contains('active')) {
+        const modalBody = document.getElementById('modal-body');
+        modalBody.querySelectorAll('[data-en]').forEach(el => {
+            const translation = el.getAttribute(`data-${lang}`);
+            if (translation) el.textContent = translation;
+        });
+        
+        // Update modal title too if possible
+        // Note: This requires finding the source section again, which is slightly complex.
+        // For now, modal content update is the priority.
+    }
 }
 
 // Load saved language preference
@@ -43,7 +66,69 @@ window.addEventListener('DOMContentLoaded', () => {
     
     // Initialize Brand Link
     initBrandLink();
+
+    // Initialize Animations
+    initAnimations();
+
+    // Initialize Hero Slideshow
+    initHeroSlideshow();
+
+    // Initialize Read More buttons
+    initReadMore();
 });
+
+// Read More / Modal functionality
+function initReadMore() {
+    const modal = document.getElementById('article-modal');
+    if (!modal) return;
+
+    const modalTitle = document.getElementById('modal-title');
+    const modalBody = document.getElementById('modal-body');
+    const closeBtn = modal.querySelector('.modal-close');
+    const overlay = modal.querySelector('.modal-overlay');
+
+    const openModal = (btn) => {
+        const contentDiv = btn.previousElementSibling;
+        const sectionTitle = btn.parentElement.querySelector('.section-title');
+        
+        if (contentDiv && contentDiv.classList.contains('expand-content')) {
+            // Set Title
+            modalTitle.textContent = sectionTitle.getAttribute(`data-${currentLang}`) || sectionTitle.textContent;
+            
+            // Clone content to modal body
+            modalBody.innerHTML = contentDiv.innerHTML;
+            
+            // Ensure translations inside modal body are correct
+            modalBody.querySelectorAll('[data-en]').forEach(el => {
+                const translation = el.getAttribute(`data-${currentLang}`);
+                if (translation) el.textContent = translation;
+            });
+
+            // Show modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scroll
+        }
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scroll
+    };
+
+    document.querySelectorAll('.read-more-btn').forEach(btn => {
+        btn.addEventListener('click', () => openModal(btn));
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+}
 
 // Mobile Menu Toggle
 function initMobileMenu() {
@@ -53,15 +138,21 @@ function initMobileMenu() {
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active');
+            // Animate hamburger lines if needed, handled by CSS mostly
         });
         
         // Close menu when clicking on a link
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
             });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !hamburger.contains(e.target) && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
         });
     }
 }
@@ -79,13 +170,14 @@ function initFAQ() {
             document.querySelectorAll('.faq-item').forEach(item => {
                 if (item !== faqItem) {
                     item.classList.remove('active');
-                    item.querySelector('.faq-answer').classList.remove('active');
+                    const otherAnswer = item.querySelector('.faq-answer');
+                    if (otherAnswer) otherAnswer.classList.remove('active');
                 }
             });
             
             // Toggle current FAQ
             faqItem.classList.toggle('active');
-            answer.classList.toggle('active');
+            if (answer) answer.classList.toggle('active');
         });
     });
 }
@@ -97,14 +189,6 @@ function initContactForm() {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                message: document.getElementById('message').value
-            };
             
             // Show success message
             alert(currentLang === 'en' 
@@ -132,28 +216,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add scroll animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+// Scroll Animations
+function initAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('[data-animate]').forEach(el => {
+        observer.observe(el);
     });
-}, observerOptions);
-
-// Observe elements for animation
-document.querySelectorAll('.card, .stat-box, .research-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
+}
 
 function highlightActiveMenu() {
     const path = window.location.pathname;
@@ -164,6 +246,7 @@ function highlightActiveMenu() {
     const menuLinks = document.querySelectorAll('.nav-menu a');
     menuLinks.forEach(link => {
         const href = link.getAttribute('href');
+        link.classList.remove('active'); // Remove active from all first
         if (href === target) {
             link.classList.add('active');
         }
@@ -177,4 +260,19 @@ function initBrandLink() {
             window.location.href = 'index.html';
         });
     }
+}
+
+// Hero Slideshow
+function initHeroSlideshow() {
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length === 0) return;
+
+    let currentSlide = 0;
+    const intervalTime = 5000; // 5 seconds
+
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, intervalTime);
 }
