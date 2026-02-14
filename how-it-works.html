@@ -3,81 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="Pictures/PDT logo.png">
+    <link rel="icon" type="image/png" href="Pictures/PDT logo.png">
     <title>How PDT Works | Photodynamic Therapy Process</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="language-toggle">
-        <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
-        <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
-    </div>
-
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
                 <img src="Pictures/PDT logo.png" alt="PDT Logo" class="nav-logo">
-                <h1 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h1>
+                <span data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</span>
             </div>
+            
+            <div class="language-toggle">
+                <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">BN</button>
+            </div>
+
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
-                <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
-                <li><a href="how-it-works.html" data-en="How It Works" data-bn="কীভাবে কাজ করে">How It Works</a></li>
+                <li><a href="about.html" data-en="About" data-bn="সম্পর্কে">About</a></li>
+                <li><a href="how-it-works.html" class="active" data-en="Process" data-bn="পদ্ধতি">Process</a></li>
                 <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
-                <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
+                <li><a href="clinic.html" data-en="Clinic" data-bn="ক্লিনিক">Clinic</a></li>
                 <li><a href="faq.html" data-en="FAQ" data-bn="প্রশ্নোত্তর">FAQ</a></li>
                 <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <section class="hero" style="padding: 80px 20px;">
-        <div class="container hero-content">
-            <h1 class="hero-title" data-en="How PDT Works" data-bn="পিডিটি কীভাবে কাজ করে">How PDT Works</h1>
-            <p class="hero-subtitle" data-en="Understanding the treatment process" data-bn="চিকিৎসা প্রক্রিয়া বোঝা">Understanding the treatment process</p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg-grid">
+            <div class="grid-item">
+                <img src="Pictures/Oral cancer.png" alt="Oral Cancer" data-en-alt="Oral Cancer" data-bn-alt="মৌখিক ক্যান্সার">
+            </div>
+            <div class="grid-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+            <div class="grid-item middle">
+                <img src="Pictures/Oral PDT process.png" alt="PDT Process" data-en-alt="PDT Process" data-bn-alt="পিডিটি প্রক্রিয়া">
+            </div>
+            <div class="grid-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+            <div class="grid-item">
+                <img src="Pictures/Cancer free.png" alt="Cancer Free" data-en-alt="Cancer Free" data-bn-alt="ক্যান্সার মুক্ত">
+            </div>
         </div>
-    </section>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title" data-en="How PDT Works" data-bn="পিডিটি কীভাবে কাজ করে" data-animate>How PDT Works</h1>
+            <p class="hero-subtitle" data-en="Understanding the treatment process" data-bn="চিকিৎসা প্রক্রিয়া বোঝা" data-animate>Understanding the treatment process</p>
+        </div>
+    </header>
 
+    <!-- Process Steps -->
     <section class="section bg-light">
         <div class="container">
             <h2 class="section-title" data-en="The PDT Treatment Process" data-bn="পিডিটি চিকিৎসা প্রক্রিয়া">The PDT Treatment Process</h2>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
+            <div class="grid-3">
+                <div class="card" data-animate>
+                    <div class="card-icon" style="background: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-bottom: 1rem;">1</div>
                     <h3 data-en="Photosensitizer Administration" data-bn="ফটোসেন্সিটাইজার প্রশাসন">Photosensitizer Administration</h3>
                     <p data-en="A light-sensitive drug (photosensitizer) is administered topically or orally. Common agents include 5-ALA or methylene blue."
                        data-bn="একটি আলো-সংবেদনশীল ওষুধ (ফটোসেন্সিটাইজার) টপিক্যালি বা মৌখিকভাবে প্রয়োগ করা হয়। সাধারণ এজেন্টগুলির মধ্যে 5-ALA বা মিথিলিন নীল অন্তর্ভুক্ত।">
                         A light-sensitive drug is administered topically or orally. Common agents include 5-ALA or methylene blue.
                     </p>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
+                <div class="card" data-animate>
+                    <div class="card-icon" style="background: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-bottom: 1rem;">2</div>
                     <h3 data-en="Accumulation Phase" data-bn="সংগ্রহ পর্যায়">Accumulation Phase</h3>
                     <p data-en="The photosensitizer accumulates preferentially in cancer cells over 2-4 hours, creating differential concentrations."
                        data-bn="ফটোসেন্সিটাইজার 2-4 ঘন্টার মধ্যে ক্যান্সার কোষে অগ্রাধিকার সংগ্রহ করে, ডিফারেনশিয়াল ঘনত্ব তৈরি করে।">
                         The photosensitizer accumulates in cancer cells over 2-4 hours.
                     </p>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
+                <div class="card" data-animate>
+                    <div class="card-icon" style="background: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-bottom: 1rem;">3</div>
                     <h3 data-en="Light Activation" data-bn="আলো সক্রিয়করণ">Light Activation</h3>
                     <p data-en="Specific wavelength light (typically 635nm LED) is delivered to the treatment area using fiber optic devices."
                        data-bn="নির্দিষ্ট তরঙ্গদৈর্ঘ্যের আলো (সাধারণত 635nm LED) ফাইবার অপটিক ডিভাইস ব্যবহার করে চিকিৎসা এলাকায় সরবরাহ করা হয়।">
                         Specific wavelength light (635nm LED) is delivered using fiber optic devices.
                     </p>
                 </div>
-                <div class="step">
-                    <div class="step-number">4</div>
+                <div class="card" data-animate>
+                    <div class="card-icon" style="background: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-bottom: 1rem;">4</div>
                     <h3 data-en="Photochemical Reaction" data-bn="ফটোকেমিক্যাল প্রতিক্রিয়া">Photochemical Reaction</h3>
                     <p data-en="Light activates the photosensitizer, producing reactive oxygen species (ROS) that destroy cancer cells."
                        data-bn="আলো ফটোসেন্সিটাইজারকে সক্রিয় করে, প্রতিক্রিয়াশীল অক্সিজেন প্রজাতি (ROS) উত্পাদন করে যা ক্যান্সার কোষ ধ্বংস করে।">
                         Light activates the photosensitizer, producing reactive oxygen species that destroy cancer cells.
                     </p>
                 </div>
-                <div class="step">
-                    <div class="step-number">5</div>
+                <div class="card" data-animate>
+                    <div class="card-icon" style="background: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-bottom: 1rem;">5</div>
                     <h3 data-en="Cell Death & Recovery" data-bn="কোষ মৃত্যু এবং পুনরুদ্ধার">Cell Death & Recovery</h3>
                     <p data-en="Cancer cells undergo apoptosis. Healthy tissue heals within 7-17 days with minimal scarring."
                        data-bn="ক্যান্সার কোষ অ্যাপোপটোসিস সহ্য করে। স্বাস্থ্যকর টিস্যু ন্যূনতম দাগ সহ 7-17 দিনের মধ্যে সুস্থ হয়।">
@@ -88,11 +117,12 @@
         </div>
     </section>
 
+    <!-- Three Elements -->
     <section class="section">
         <div class="container">
             <h2 class="section-title" data-en="Three Essential Elements" data-bn="তিনটি প্রয়োজনীয় উপাদান">Three Essential Elements</h2>
-            <div class="cards-grid">
-                <div class="card">
+            <div class="grid-3">
+                <div class="card" data-animate>
                     <div class="card-icon">💊</div>
                     <h3 data-en="1. Photosensitizer" data-bn="১. ফটোসেন্সিটাইজার">1. Photosensitizer</h3>
                     <p data-en="Light-sensitive drugs that accumulate in cancer cells. Second-generation agents like 5-ALA are chemically pure, more efficient, and have optimized absorption wavelengths."
@@ -100,7 +130,7 @@
                         Light-sensitive drugs that accumulate in cancer cells. 5-ALA is chemically pure and efficient.
                     </p>
                 </div>
-                <div class="card">
+                <div class="card" data-animate>
                     <div class="card-icon">💡</div>
                     <h3 data-en="2. Light Source" data-bn="২. আলোর উৎস">2. Light Source</h3>
                     <p data-en="Specific wavelength light (usually 635nm red light from LED sources) that matches the photosensitizer's absorption spectrum for maximum activation."
@@ -108,7 +138,7 @@
                         635nm red LED light that matches the photosensitizer's absorption spectrum.
                     </p>
                 </div>
-                <div class="card">
+                <div class="card" data-animate>
                     <div class="card-icon">🫁</div>
                     <h3 data-en="3. Oxygen" data-bn="৩. অক্সিজেন">3. Oxygen</h3>
                     <p data-en="Tissue oxygen reacts with activated photosensitizer to produce cytotoxic reactive oxygen species (ROS) that cause direct tumor cell death and damage to tumor microvasculature."
@@ -120,29 +150,36 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h3>
-                    <p data-en="Advanced photodynamic therapy for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি">Advanced photodynamic therapy</p>
+                    <p data-en="Advanced photodynamic therapy for oral cancer treatment. Dedicated to providing non-invasive, effective care." 
+                       data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য উন্নত ফটোডাইনামিক থেরাপি।">
+                        Advanced photodynamic therapy for oral cancer treatment. Dedicated to providing non-invasive, effective care.
+                    </p>
                 </div>
                 <div class="footer-section">
-                    <h4 data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
-                    <ul>
+                    <h4 style="color:white; margin-bottom:1rem;" data-en="Quick Links" data-bn="দ্রুত লিঙ্ক">Quick Links</h4>
+                    <ul class="footer-links">
                         <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
                         <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
+                        <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
                         <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 data-en="Contact Info" data-bn="যোগাযোগের তথ্য">Contact Info</h4>
+                    <h4 style="color:white; margin-bottom:1rem;" data-en="Contact Info" data-bn="যোগাযোগের তথ্য">Contact Info</h4>
                     <p>Email: info@pdtcancercenter.com</p>
                     <p>Phone: +880-XXX-XXXXXX</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-en="© 2026 PDT Cancer Center. All rights reserved." data-bn="© ২০২৬ পিডিটি ক্যান্সার সেন্টার। সর্বস্বত্ব সংরক্ষিত।">© 2026 PDT Cancer Center. All rights reserved.</p>
+                <p data-en="© 2026 PDT Cancer Center. All rights reserved." data-bn="© ২০২৬ পিডিটি ক্যান্সার সেন্টার। সর্বস্বত্ব সংরক্ষিত।">
+                    © 2026 PDT Cancer Center. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
