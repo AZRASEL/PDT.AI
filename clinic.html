@@ -9,54 +9,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="language-toggle">
-        <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
-        <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">বাংলা</button>
-    </div>
-
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
                 <img src="Pictures/PDT logo.png" alt="PDT Logo" class="nav-logo">
-                <h1 data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</h1>
+                <span data-en="PDT Cancer Center" data-bn="পিডিটি ক্যান্সার সেন্টার">PDT Cancer Center</span>
             </div>
+            
+            <div class="language-toggle">
+                <button id="lang-en" class="lang-btn active" onclick="setLanguage('en')">EN</button>
+                <button id="lang-bn" class="lang-btn" onclick="setLanguage('bn')">BN</button>
+            </div>
+
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" data-en="Home" data-bn="হোম">Home</a></li>
-                <li><a href="about.html" data-en="About PDT" data-bn="পিডিটি সম্পর্কে">About PDT</a></li>
-                <li><a href="how-it-works.html" data-en="How It Works" data-bn="কীভাবে কাজ করে">How It Works</a></li>
+                <li><a href="about.html" data-en="About" data-bn="সম্পর্কে">About</a></li>
+                <li><a href="how-it-works.html" data-en="Process" data-bn="পদ্ধতি">Process</a></li>
                 <li><a href="research.html" data-en="Research" data-bn="গবেষণা">Research</a></li>
-                <li><a href="clinic.html" data-en="Our Clinic" data-bn="আমাদের ক্লিনিক">Our Clinic</a></li>
+                <li><a href="clinic.html" class="active" data-en="Clinic" data-bn="ক্লিনিক">Clinic</a></li>
                 <li><a href="faq.html" data-en="FAQ" data-bn="প্রশ্নোত্তর">FAQ</a></li>
                 <li><a href="contact.html" data-en="Contact" data-bn="যোগাযোগ">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <section class="hero" style="padding: 80px 20px;">
-        <div class="container hero-content">
-            <h1 class="hero-title" data-en="Our PDT Treatment Center" data-bn="আমাদের পিডিটি ট্রিটমেন্ট সেন্টার">Our PDT Treatment Center</h1>
-            <p class="hero-subtitle" data-en="State-of-the-art facility for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য অত্যাধুনিক সুবিধা">State-of-the-art facility</p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-slideshow">
+            <div class="slide active" style="background-image: url('Pictures/PDT setup.png')"></div>
+            <div class="slide" style="background-image: url('Pictures/Oral PDT.png')"></div>
+            <div class="slide" style="background-image: url('Pictures/follow up.png')"></div>
         </div>
-    </section>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title" data-en="Our PDT Treatment Center" data-bn="আমাদের পিডিটি ট্রিটমেন্ট সেন্টার" data-animate>Our PDT Treatment Center</h1>
+            <p class="hero-subtitle" data-en="State-of-the-art facility for oral cancer treatment" data-bn="মৌখিক ক্যান্সার চিকিৎসার জন্য অত্যাধুনিক সুবিধা" data-animate>State-of-the-art facility</p>
+        </div>
+    </header>
 
-    <section class="section bg-light">
+    <section class="section">
         <div class="container">
             <h2 class="section-title" data-en="Our Commitment to Excellence" data-bn="উৎকর্ষতার প্রতি আমাদের প্রতিশ্রুতি">Our Commitment to Excellence</h2>
-            <div class="content-grid">
-                <div class="content-text">
+            <div class="grid-2">
+                <div class="content-text" data-animate>
                     <p data-en="Our clinic is dedicated to providing cutting-edge photodynamic therapy for oral cancer patients. We combine the latest technology with compassionate care to deliver the best possible outcomes."
                        data-bn="আমাদের ক্লিনিক মৌখিক ক্যান্সার রোগীদের জন্য অত্যাধুনিক ফটোডাইনামিক থেরাপি প্রদানে নিবেদিত। আমরা সর্বোত্তম সম্ভাব্য ফলাফল প্রদানের জন্য সর্বশেষ প্রযুক্তিকে সহানুভূতিশীল যত্নের সাথে একত্রিত করি।">
                         Our clinic is dedicated to providing cutting-edge photodynamic therapy for oral cancer patients.
                     </p>
                     <p data-en="We follow international protocols and evidence-based practices, using state-of-the-art equipment including LED light sources and smartphone-based fluorescence imaging for precise treatment guidance."
                        data-bn="আমরা আন্তর্জাতিক প্রোটোকল এবং প্রমাণ-ভিত্তিক অনুশীলন অনুসরণ করি, সুনির্দিষ্ট চিকিৎসা নির্দেশনার জন্য LED লাইট সোর্স এবং স্মার্টফোন-ভিত্তিক ফ্লুরোসেন্স ইমেজিং সহ অত্যাধুনিক সরঞ্জাম ব্যবহার করি।">
-                        We follow international protocols using state-of-the-art equipment.
+                        We follow international protocols and evidence-based practices for precise treatment guidance.
                     </p>
                 </div>
-                <div class="content-image">
-                    <div class="placeholder-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                        <p data-en="Modern PDT Treatment Room" data-bn="আধুনিক পিডিটি ট্রিটমেন্ট রুম">Modern PDT Treatment Room</p>
+                <div class="content-image" data-animate>
+                    <div class="image-stack">
+                        <img src="Pictures/follow up.png" alt="Follow Up" data-en-alt="Follow Up" data-bn-alt="ফলো আপ" loading="lazy">
+                        <img src="Pictures/PDT visualization 1.png" alt="PDT Visualization" data-en-alt="PDT Visualization" data-bn-alt="পিডিটি ভিজ্যুয়ালাইজেশন" loading="lazy">
+                        <img src="Pictures/PDT setup.png" alt="PDT Setup" data-en-alt="PDT Setup" data-bn-alt="পিডিটি সেটআপ" loading="lazy">
                     </div>
                 </div>
             </div>
