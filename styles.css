@@ -1045,7 +1045,18 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .hero {
-        padding-top: 100px;
+        padding-top: 80px;
+        min-height: 50vh; /* Reduced height for mobile to show more of the background image */
+        height: auto;
+    }
+
+    .slide {
+        background-position: center top; /* Focus on the top/center of images */
+    }
+
+    /* Adjust the image stack height for mobile to prevent vertical stretching */
+    .image-stack {
+        height: 250px;
     }
 
     .footer-content {
